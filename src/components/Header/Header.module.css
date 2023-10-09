@@ -1,0 +1,45 @@
+.navbar {
+	position: fixed;
+	height: 60px;
+	background-color: #d9d9d9a0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mobileMenu {
+	display: none;
+}
+
+.celestaLogo {
+	margin-left: 20px;
+	font-weight: 900;
+	font-size: xx-large;
+	color: black;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navLinks {
+	height: 60px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.navLink {
+	height: 80px;
+	padding-bottom: 20px;
+	width: 120px;
+	max-width: 20vw;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 10px;
+}
+
+.navLink:hover {
+	transition: all 0.5s;
+	border-radius: 0 0 20px 20px;
+	background-color: aliceblue;
+}
