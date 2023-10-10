@@ -1,0 +1,13 @@
+.heroSection {
+	width: 100%;
+}
+
+.heroSection img {
+	transition: all 1s;
+	transform: translateY(-10%);
+	width: 100%;
+}
+
+.heroSection img:hover {
+	transform: translateY(0%);
+}
