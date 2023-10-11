@@ -44,7 +44,7 @@ export default function Header({ currentPage }) {
 					Register
 				</Link>
 				<Link href="/page5" className={styles.login}>
-					<div>Sign up</div>
+					Sign in
 				</Link>
 			</div>
 		</nav>
