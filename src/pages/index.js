@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Header from "../components/Header/Header";
+import { Header, HomeCard } from "@/components";
 import Footer from "../components/footer/footer";
 
 export default function Home() {
@@ -12,11 +12,11 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Header />
+			<Header currentPage={"Home"}/>
 			<div>
-				<div className={styles.heroSection}>
+				<section className={styles.heroSection}>
 					<img loading="lazy" src={"/home/verdant.jpg"} />
-				</div>
+				</section>
 				<section className={styles.aboutSection}></section>
 			<Footer />
 			</div>

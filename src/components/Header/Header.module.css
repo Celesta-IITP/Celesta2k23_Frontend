@@ -1,12 +1,15 @@
 .navbar {
 	position: fixed;
+	top: 0;
 	height: 60px;
-	background-color: #d9d9d9a0;
+	padding: 0 20px;
+	background-color: #fffc;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	z-index: 5;
+	box-shadow: 0 -2.5px 10px 2.5px #777;
 }
 
 .mobileMenu {
@@ -14,10 +17,8 @@
 }
 
 .celestaLogo {
-	margin-left: 20px;
 	font-weight: 900;
 	font-size: xx-large;
-	color: black;
 	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -28,65 +29,98 @@
 	align-items: center;
 }
 
-.navLink {
+.navLink,
+.register,
+.login {
 	height: 40px;
 	padding: 0px 15px;
 	width: fit-content;
 	max-width: 20vw;
-	color: black;
 	display: flex;
+	white-space: nowrap;
 	align-items: center;
 	justify-content: center;
 	margin: 0 5px;
-	transition: all 0.5s;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	transition: all 0.5s ease;
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
 }
 
-.navLink:hover {
+.navLink:hover,
+.register:hover,
+.login:hover {
 	border-radius: 20px;
-	color: white;
-	background-color: #7fbd22;
+	color: black;
+	background-image: linear-gradient(90deg, #7ed0a6, #4197ff), linear-gradient(90deg, #67aa88, #61adf3);
 }
 
 .register {
-	height: 40px;
-	max-width: 20vw;
-	display: flex;
-	align-items: center;
-	margin: 0 10px;
-	padding: 5px 15px;
-	border: 2px solid transparent;
-	transition: all 0.5s ease;
-	border-radius: 5px;
-	color: black;
 	background-image: linear-gradient(white, white), linear-gradient(90deg, #67aa88, #3e9cf3);
-	background-origin: border-box;
-	background-clip: padding-box, border-box;
-}
-
-.register:hover {
-	border-radius: 20px;
-	/* color: white; */
-	/* background-image: linear-gradient(90deg, #67aa88, #3e9cf3); */
 }
 
 .login {
-	height: 40px;
-	max-width: 20vw;
-	display: flex;
-	align-items: center;
-	margin: 0 10px;
-	padding: 5px 15px;
-	border: 2px solid transparent;
-	transition: all 0.5s ease;
-	border-radius: 5px;
+	margin: 0 20px;
 	color: white;
-	background-image: linear-gradient(90deg, #668A5F, #78C0B3);
-	background-origin: border-box;
-	background-clip: padding-box, border-box;
+	background-image: linear-gradient(90deg, #668a5f, #78c0b3);
 }
 
 .login:hover {
-	border-radius: 20px;
-	/* color: black; */
-	/* background-image: linear-gradient(white, white), linear-gradient(90deg, #668A5F, #78C0B3); */
+	color: black;
+	background-image: linear-gradient(90deg, #82b079, #8fe6d6), linear-gradient(90deg, #668a5f, #78c0b3);
+}
+
+.current {
+	background-color: #67aa88 !important;
+	text-decoration: underline;
+	color: white;
+}
+
+.hamburger {
+	display: none;
+}
+
+.hamburgerButton {
+	cursor: pointer;
+	font-size: 25px;
+}
+
+@media screen and (max-width: 800px) {
+	.hamburger {
+		display: block;
+	}
+
+	.navLinks {
+		display: flex;
+		transform: translateY(-100%);
+		position: absolute;
+		width: 100vw;
+		top: 0px;
+		background-color: #fff8;
+		height: fit-content;
+		max-height: 50vh;
+		min-height: 250px;
+		left: 0;
+		flex-direction: column;
+		gap: 20px;
+		padding: 20px;
+		z-index: 4;
+		opacity: 0;
+		transition: all 1s ease;
+	}
+
+	.active {
+		opacity: 1;
+		top: 60px;
+		transform: translateY(0);
+	}
+
+	.navLink,
+	.register,
+	.login {
+		background-color: #d9d9d980;
+		width: 35vw;
+		min-width: 150px;
+	}
 }
