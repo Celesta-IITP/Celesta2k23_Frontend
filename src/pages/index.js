@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header/Header";
+import Footer from "../components/footer/footer";
 
 export default function Home() {
 	return (
@@ -17,6 +18,7 @@ export default function Home() {
 					<img loading="lazy" src={"/home/verdant.jpg"} />
 				</div>
 				<section className={styles.aboutSection}></section>
+			<Footer />
 			</div>
 		</>
 	);
