@@ -1,10 +1,10 @@
 const teamdata = [
-       
-            { 
+
+            {
                 "teamname" : "Fest Coordinators",
                 "members" : [{
                         "name" : "Joshika Arya",
-                        "image" :  require("../../assets/img/CORDS/Joshika.jpg"),                                            
+                        "image" :  require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "https://www.facebook.com/joshika.arya",
                         "ln" : "https://www.linkedin.com/in/joshika/",
@@ -12,7 +12,7 @@ const teamdata = [
                     },
                     {
                         "name" : "Yuvi Dhelawat",
-                        "image" :  require("../../assets/img/CORDS/YUVI.JPG"), 
+                        "image" :  require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "https://www.facebook.com/yuvi.dhelawat",
                         "ln" : "https://www.linkedin.com/in/yuvi-dhelawat/",
@@ -20,7 +20,7 @@ const teamdata = [
                 ]
 
         },
-        { 
+        {
                 "teamname" : "Marketing and Sponsorship",
                 "members" : [{
                         "name" : "Shashwat Mahajan ",
@@ -31,14 +31,14 @@ const teamdata = [
                     },
                     {
                         "name" : "Aryan Kothari",
-                        "image" :  require("../../assets/img/CORDS/Aryan_kothari.jpg"),
+                        "image" :  require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "www.fb.com",
                         "ln" : "www.linkedin.com",
                     },
                     {
                         "name" : "Balbeer Yadav",
-                        "image" :  require("../../assets/img/CORDS/Balbeer.png"),
+                        "image" :  require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "www.fb.com",
                         "ln" : "www.linkedin.com",
@@ -46,7 +46,7 @@ const teamdata = [
                 ]
 
         },
-        { 
+        {
             "teamname" : "Media and Public Relations",
             "members" : [{
                     "name" : "Arohan Panda",
@@ -57,14 +57,14 @@ const teamdata = [
                 },
                 {
                     "name" : "Vijaya Gonugade",
-                    "image" :  require("../../assets/img/CORDS/Vijaya Gonugade.jpeg"),
+                    "image" :  require("../../assets/img/4041.png"),
                     "position" : "",
                     "fb" : "www.fb.com",
                     "ln" : "www.linkedin.com",
                 },
                 {
                     "name" : "Anmol Chaddha",
-                    "image" :  require("../../assets/img/CORDS/Anmol Chaddha.JPG"),
+                    "image" :  require("../../assets/img/4041.png"),
                     "position" : "",
                     "fb" : "www.fb.com",
                     "ln" : "www.linkedin.com",
@@ -79,7 +79,7 @@ const teamdata = [
             ]
 
     },
-    { 
+    {
         "teamname" : "Dev Team ",
         "members" : [{
                 "name" : "Aman Jee",
@@ -98,25 +98,25 @@ const teamdata = [
         ]
 
             },
-            { 
+            {
                 "teamname" : "Registration",
                 "members" : [{
                         "name" : "Vinay Kumar Meena",
-                        "image" :  require("../../assets/img/CORDS/vinay.jpeg"),
+                        "image" :  require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "www.fb.com",
                         "ln" : "www.linkedin.com",
                     },
                     {
                         "name" : "Swati Kumari",
-                        "image" : require("../../assets/img/CORDS/swati.jpeg"),
+                        "image" : require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "www.fb.com",
                         "ln" : "www.linkedin.com",
                     },
                     {
                         "name" : "Rakesh Kumar",
-                        "image" : require("../../assets/img/CORDS/rakesh kumar.jpeg"),
+                        "image" : require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "www.fb.com",
                         "ln" : "www.linkedin.com",
@@ -124,7 +124,7 @@ const teamdata = [
                 ]
 
             },
-            { 
+            {
                 "teamname" : "Creatives",
                 "members" : [{
                         "name" : "Harshavardhan.k ",
@@ -150,7 +150,7 @@ const teamdata = [
                 ]
 
             },
-            { 
+            {
                 "teamname" : "Hospitality & Logistics",
                 "members" : [{
                         "name" : "Saiyyam Mittal",
@@ -161,14 +161,14 @@ const teamdata = [
                     },
                     {
                         "name" : "Sunny Chaturvedi",
-                        "image" :  require("../../assets/img/CORDS/Sunny_Chaturvedi.jpg"),
+                        "image" :  require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "www.fb.com",
                         "ln" : "www.linkedin.com",
                     },
                     {
                         "name" : "Rahul Verma ",
-                        "image" :   require("../../assets/img/CORDS/Rahul Verma.jpg"),
+                        "image" :   require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "www.fb.com",
                         "ln" : "www.linkedin.com",
@@ -176,18 +176,18 @@ const teamdata = [
                 ]
 
             },
-            { 
+            {
                 "teamname" : "Flagship Events",
                 "members" : [{
                         "name" : "Hrishabh Raj",
-                        "image" :  require("../../assets/img/CORDS/Hrishabh_raj.jpg"),
+                        "image" :  require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "www.fb.com",
                         "ln" : "www.linkedin.com",
                     },
                     {
                         "name" : "Durgesh Singh",
-                        "image" :   require("../../assets/img/CORDS/Durgesh.jpg"),
+                        "image" :   require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "www.fb.com",
                         "ln" : "www.linkedin.com",
@@ -202,7 +202,7 @@ const teamdata = [
                 ]
 
             },
-            { 
+            {
                 "teamname" : "Workshops, Exhibitions and Operations",
                 "members" : [{
                         "name" : "Gaurav Pratap Singh",
@@ -228,7 +228,7 @@ const teamdata = [
                 ]
 
             },
-            { 
+            {
                 "teamname" : "Events & Guest Lectures",
                 "members" : [
                     {
@@ -240,7 +240,7 @@ const teamdata = [
                     },
                     {
                         "name" : "Shreya Sinha",
-                        "image" :  require("../../assets/img/CORDS/Shreya.jpg"),
+                        "image" :  require("../../assets/img/4041.png"),
                         "position" : "",
                         "fb" : "www.fb.com",
                         "ln" : "www.linkedin.com",

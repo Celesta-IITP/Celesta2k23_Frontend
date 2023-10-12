@@ -355,7 +355,7 @@ class LandingPage extends React.Component {
                   <img
                     alt="..."
                     className="img-fluid floating"
-                    src={require("assets/img/chester-wade.jpg")}
+                    src={require("../../assets/img/4041.png")}
                   />
                   <Card className="card-stats bg-danger">
                     <CardBody>

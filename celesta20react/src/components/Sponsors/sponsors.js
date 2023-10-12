@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import abc1 from "../../assets/img/james.jpg";
 // import abc2 from "../../assets/img/ryan.jpg";
 import ExamplesNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footer/Footer.js";
@@ -10,16 +9,16 @@ import sponsdata from "./sponsorsdata" ;
 
 const Sponsors = ( ) =>  {
 
-  
-  
+
+
   return(
-  
+
 
       <div className="sp-main">
         <ExamplesNavbar />
         {/*<h1 className="sp-head">Sponsors</h1>*/}
         <div className="sp-slider" style={{"background-image": "url(https://i.ibb.co/92HJxz2/team-bg.jpg)"}}>
-         
+
           <br/><br/><br/><br/>
 
           <h1 className="sp_head2 heading"> OUR LAST YEAR SPONSORS! </h1>
@@ -27,7 +26,7 @@ const Sponsors = ( ) =>  {
            <br/>
 
           </div>
-          {sponsdata.map(( x , i) =>{ 
+          {sponsdata.map(( x , i) =>{
             return(
 
           <div className="sp_img " >
@@ -38,11 +37,11 @@ const Sponsors = ( ) =>  {
 
           </div>
       )
-            })}          
+            })}
         </div>
         <Footer />
       </div>
-  
+
   )
 }
 

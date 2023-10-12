@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 export default () => (
   <Carousel autoPlay>
     <div>
-      <img alt="" src={require('../../assets/img/Pronites/ATM1245_Anubhav Singh Bassi.jpg')} />
+      <img alt="" src={require('../../assets/img/4041.png')} />
       <p className="legend">COMEDY NIGHT</p>
     </div>
     <div>
