@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Header, HomeCard } from "@/components";
+import Footer from "../components/footer/footer";
 
 export default function Home() {
 	return (
@@ -11,7 +12,7 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Header currentPage={"Home"}/>
+			<Header currentPage={"Home"} />
 			<div>
 				<section className={styles.heroSection}>
 					<img loading="lazy" src={"/home/verdant.jpg"} />
@@ -22,6 +23,7 @@ export default function Home() {
 					<HomeCard title={"Workshops"} />
 				</section>
 			</div>
+			<Footer />
 		</>
 	);
 }
