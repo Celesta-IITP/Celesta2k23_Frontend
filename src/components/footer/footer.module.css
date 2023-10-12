@@ -2,7 +2,7 @@
 	width: 100%;
 	/* position: relative; */
 	margin-top: 250px;
-	padding: 40px 0 30px;
+	padding: 40px 0 20px 20px;
 	background-color: rgb(111, 219, 149);
 	/* margin-top: 20rem; */
 }
@@ -65,6 +65,7 @@
 }
 
 .ft_3 i {
+	fill: black;
 	padding-right: 0.5rem;
 }
 
