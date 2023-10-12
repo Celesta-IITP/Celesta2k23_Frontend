@@ -17,6 +17,10 @@ export default function Home() {
 					<img loading="lazy" src={"/home/verdant.jpg"} />
 				</section>
 				<section className={styles.aboutSection}></section>
+				<section className={styles.cardSection}>
+					<HomeCard title={"Events"} />
+					<HomeCard title={"Workshops"} />
+				</section>
 			</div>
 		</>
 	);
