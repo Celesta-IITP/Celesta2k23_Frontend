@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { Header, HomeCard } from "@/components";
-import Footer from "../components/footer/footer";
+import { Header, Footer, HomeCard } from "@/components";
 
 export default function Home() {
 	return (
@@ -22,8 +21,8 @@ export default function Home() {
 					<HomeCard title={"Events"} />
 					<HomeCard title={"Workshops"} />
 				</section>
+				<Footer />
 			</div>
-			<Footer />
 		</>
 	);
 }
