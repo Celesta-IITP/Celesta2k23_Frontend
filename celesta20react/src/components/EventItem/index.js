@@ -4,7 +4,7 @@ import styles from './eventitem.module.css'
 import Modal from '../BigModal/index'
 import React,{ useState } from 'react'
 
-/*  
+/*
 event={
     is_active=bool,
     poster=string(url of event poster),*
@@ -25,12 +25,13 @@ event={
     id=any
 }
 */
-const index = ( {event} ) => {
+const Index = ( {event} ) => {
     const [modal, setModal] = useState(false)
+
     // var model=false
-    const close = () => {
-        setModal(false);
-    }
+    // const close = () => {
+    //     setModal(false);
+    // }
 
     return (
         <>
@@ -91,7 +92,7 @@ const index = ( {event} ) => {
                     <Modal
                         title={event.name}
                         body={event}
-                        closeHandler={close}
+                        closeHandler={(prev)=>setModal(!prev)}
                     />
                 </>
             )}
@@ -99,4 +100,4 @@ const index = ( {event} ) => {
     )
 }
 
-export default index
+export default Index
