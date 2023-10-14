@@ -18,7 +18,7 @@ class Timer extends React.Component {
 
   componentDidMount() {
     this.interval = setInterval(() => {
-      var d_day = moment("2020-12-21");
+      var d_day = moment("2023-11-03");
       var now = moment();
 
       var left_time = moment(d_day - now);
@@ -66,11 +66,11 @@ class Timer extends React.Component {
             </div>
           </Row>
         </Container>
-        <img
+        {/* <img
           class="rocket-object"
           src={require("../../assets/img/homeassets/rocket.svg")}
           width="60px"
-        ></img>
+        ></img> */}
       </div>
     );
   }

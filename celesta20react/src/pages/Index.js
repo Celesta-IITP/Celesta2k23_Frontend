@@ -3,7 +3,7 @@ import { compose } from "redux";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 // core components
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
+import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 
 
@@ -39,7 +39,8 @@ class Index extends React.Component {
   render() {
     return (
       <div>
-        <IndexNavbar />
+        {/* <Navbar /> */}
+		<Navbar />
         <div className="wrapper bg">
           <Header />
           <div className="main">

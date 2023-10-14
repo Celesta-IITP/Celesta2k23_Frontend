@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ExamplesNavbar from "components/Navbars/IndexNavbar.js";
+import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import {
   Button,
@@ -22,7 +22,7 @@ class addEvent extends Component {
     return (
       <div style={{ overflowX: "hidden" }}>
         <div>
-          <ExamplesNavbar />
+          <Navbar />
         </div>
         <div style={{ backgroundColor: "#05001e" }}>
           <br></br>

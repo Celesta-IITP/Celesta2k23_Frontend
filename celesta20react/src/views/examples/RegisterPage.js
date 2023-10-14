@@ -33,7 +33,7 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/IndexNavbar.js";
+import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import { USER_LOADING } from "redux/actions/types";
 import { registerUser } from "redux/actions/authActions";
@@ -205,7 +205,7 @@ class RegisterPage extends React.Component {
     const { msg } = this.state;
     return (
       <>
-        <ExamplesNavbar />
+        <Navbar />
         <div className="wrapper">
           <div className="page-header">
             <div className="page-header-image" />

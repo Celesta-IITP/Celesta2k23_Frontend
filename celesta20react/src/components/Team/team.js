@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Navbars/IndexNavbar";
+import Navbar from "../Navbars/Navbar";
 import Footer from "../Footer/Footer.js";
 import  "./team.css";
 import teamdata from "./teamdata";

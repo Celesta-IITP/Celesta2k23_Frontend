@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import abc2 from "../../assets/img/ryan.jpg";
-import ExamplesNavbar from "components/Navbars/IndexNavbar.js";
+import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import "./sponsors.css";
 import sponsdata from "./sponsorsdata" ;
@@ -15,7 +15,7 @@ const Sponsors = ( ) =>  {
 
 
       <div className="sp-main">
-        <ExamplesNavbar />
+        <Navbar />
         {/*<h1 className="sp-head">Sponsors</h1>*/}
         <div className="sp-slider" style={{"background-image": "url(https://i.ibb.co/92HJxz2/team-bg.jpg)"}}>
 

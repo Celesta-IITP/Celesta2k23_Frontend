@@ -45,7 +45,7 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/IndexNavbar.js";
+import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 
 let ps = null;
@@ -85,7 +85,7 @@ class ContactUsPage extends React.Component {
   render() {
     return (
       <>
-        <ExamplesNavbar />
+        <Navbar />
         <div className="wrapper">
           <div className="page-header">
             <img

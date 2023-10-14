@@ -32,6 +32,7 @@ jQuery(document).ready(function($){
 	$('.nav-but-wrap').on('click', function(){
 		$('.cd-menu-icon').toggleClass('is-clicked'); 
 		$('.cd-header').toggleClass('menu-is-open');
+		$('.menu-icon').toggleClass('open');
 		
 		//in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
 		if( $('.cd-primary-nav').hasClass('is-visible') ) {
