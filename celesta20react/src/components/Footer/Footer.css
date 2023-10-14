@@ -1,90 +1,71 @@
-/* footer */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-section {
-  padding: 60px 0;
-  /* min-height: 100vh;*/
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.contact-area {
-  border-bottom: 1px solid #353c46;
+.Footer {
+	width: 100%;
+	/* position: relative; */
+	margin-top: 250px;
+	padding: 40px 0 20px 20px;
+	background-color: black;
+	/* margin-top: 20rem; */
 }
 
-.contact-content p {
-  font-size: 15px;
-  margin: 30px 0 60px;
-  position: relative;
+.ft_1 h3 {
+	font-weight: 700;
+	font-family: cursive;
+	letter-spacing: 2px;
+	padding: 0.5rem 0;
 }
 
-.contact-content p::after {
-  background: #353c46;
-  bottom: -30px;
-  content: "";
-  height: 1px;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%);
-  width: 80%;
+.ft_1 span {
+	color: #f60838;
 }
 
-.contact-content h6 {
-  color: #8b9199;
-  font-size: 15px;
-  font-weight: 400;
-  margin-bottom: 10px;
+.ft_1 p {
+	padding: 0rem 5rem 0.8rem 0;
+	font-weight: 500;
 }
 
-.contact-content span {
-  color: #353c47;
-  margin: 0 10px;
+.footerIcons i {
+	padding: 0.2rem 0.5rem 0.4rem 0.5rem;
+	background: #e1e1e1;
+	fill: #f60838;
+	margin: 0 0.5rem;
+	border-radius: 50%;
 }
 
-.contact-social {
-  margin-top: 30px;
+.footerIcons i:hover {
+	background: #f60838;
+	fill: #fff;
+	transition: 0.6s;
+	cursor: pointer;
 }
 
-.contact-social > ul {
-  display: inline-flex;
+.Footer h5 {
+	color: #f60838;
 }
 
-.contact-social ul li a {
-  border: 1px solid #8b9199;
-  color: #8b9199;
-  display: inline-block;
-  height: 40px;
-  margin: 0 10px;
-  padding-top: 7px;
-  transition: all 0.4s ease 0s;
-  width: 40px;
+.ft_2 ul {
+	list-style: none;
+	padding-left: 0;
 }
 
-.contact-social ul li a:hover {
-  border: 1px solid #fab702;
-  color: #fab702;
+.ft_2 ul li {
+	padding: 0.35rem 0;
+	font-weight: 500;
 }
 
-.contact-content img {
-  max-width: 210px;
+.ft_2 ul a {
+	text-decoration: none;
+	color: #000;
+	font-size: 1.06rem;
 }
 
-section,
-footer {
-  background: #1a1e25;
-  color: #868c96;
+.ft_3 p {
+	font-weight: 500;
+	padding: 0.1rem 0;
+	font-size: 1.06rem;
 }
 
-footer p {
-  padding: 40px 0;
-  text-align: center;
+.ft_3 i {
+	fill: black;
+	padding-right: 0.5rem;
 }
 
-footer img {
-  width: 44px;
-}
