@@ -4,6 +4,7 @@ body.register-page{
     background-color: white;
     /* font-family: ; */
 }
+
 .alrdyregis{
   color:#232323;
   text-align: center;
@@ -50,7 +51,7 @@ body.register-page{
   display:flex;
   border: 1px solid #e9ecef;
   border-radius: 33px;
-  box-shadow: 1px 3px 10px #e9ecef;
+  box-shadow: 1px 3px 10px #686767;
   background-color: white;
   justify-content: center;
   /* margin-left: 100px; */
@@ -67,20 +68,24 @@ body.register-page{
 }
 
 #form >  input{
-  border: 1px solid #e9ecef;
+  border: 1px solid #00000021;
   padding: .9em 1em;
   border-radius: 2px;
   margin-left: 20px;
   margin-right: 10px;
   height:49px;
-  color: #232323;
+  color: #000000;
   border-radius: 10px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
 }
 #form > input:focus{
   outline: none;
 }
+
+/* #form #input::placeholder{
+  color: #000000;
+  font-weight: bold;
+} */
 
 #form > .bttn{
   background-color:#232323;
