@@ -136,7 +136,7 @@ body {
 	top: 40%;
 	bottom: auto;
 	transition: all 0.3s ease-out;
-	right: 4em;
+	right: 36px;
 }
 .menu-icon {
 	height: 30px;
@@ -508,6 +508,7 @@ span.countdown-item {
 	box-shadow: 8px 8px 5px #544661;
 }
 .countdown-head {
+	color: white;
 	font-family: "Merriweather", serif;
 }
 @media only screen and (max-width: 550px) {

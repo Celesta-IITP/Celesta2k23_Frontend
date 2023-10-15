@@ -6,6 +6,7 @@ import styles from './events.module.css'
 import React,{ useEffect, useState } from 'react'
 
 import EventItem from './EventItem/index'
+import Navbar from './Navbars/Navbar'
 
 const Events = () => {
     const [events, setEvents] = useState([{is_active:true,
@@ -140,6 +141,7 @@ const Events = () => {
     }, [])
     return (
         <div className={styles.mainContainer}>
+			<Navbar />
             <head>
                 <title>Events - Anwesha 2023</title>
                 <meta name="description" content="Multicity-Anwesha 2023" />

@@ -15,18 +15,16 @@ class ComponentsNavbar extends React.Component {
 		super(props);
 		this.state = {
 			secondaryOpen: false,
+			profileOpen: false,
 			collapseOpen: false,
+			// userInfo: { name: "Happy", celestaID: "CLT1234" },
+			// userInfo: { isAdmin: true, celestaID: "CLT1234" },
 			userInfo: this.props.user ? this.props.user : {},
 		};
 	}
 	logoutHandler = (e) => {
 		this.props.logoutUser();
 		/*this.props.history.push("/");*/
-	};
-	handleSecondaryBar = () => {
-		this.setState({
-			secondaryOpen: !this.state.secondaryOpen,
-		});
 	};
 	render() {
 		return (
@@ -43,9 +41,7 @@ class ComponentsNavbar extends React.Component {
 
 						<ul className="nav-desktop-primary">
 							<li>
-								{/* <Button> */}
 								<Link to="/">HOME</Link>
-								{/* </Button> */}
 							</li>
 
 							<li
@@ -59,20 +55,17 @@ class ComponentsNavbar extends React.Component {
 										secondaryOpen: false,
 									})
 								}>
-								<a className="nav-menu-opener" style={this.state.secondaryOpen ? { textDecoration: "underline" } : {}}>
+								<Link className="nav-menu-opener" style={this.state.secondaryOpen ? { textDecoration: "underline" } : {}}>
 									THE FEST
-								</a>
+								</Link>
 
 								{this.state.secondaryOpen && (
 									<div className="nav-desktop-secondary">
-										{/* <li>THE FEST</li> */}
-										{/* <NavItem> */}
-										<NavLink href="/ca">CAMPUS AMBASADDOR</NavLink>
-										<NavLink href="/Points">LIVE POINTS TABLE</NavLink>
-										<NavLink href="/gallery">GALLERY</NavLink>
-										<NavLink href="/sponsors">SPONSORS</NavLink>
-										<NavLink href="/Team">OUR TEAM</NavLink>
-										{/* </NavItem> */}
+										<Link to="/ca">CAMPUS AMBASADDOR</Link>
+										<Link to="/Points">LIVE POINTS TABLE</Link>
+										<Link to="/gallery">GALLERY</Link>
+										<Link to="/sponsors">SPONSORS</Link>
+										<Link to="/Team">OUR TEAM</Link>
 									</div>
 								)}
 							</li>
@@ -80,6 +73,62 @@ class ComponentsNavbar extends React.Component {
 							<li>
 								<Link to="/events-page">EVENTS</Link>
 							</li>
+
+							<li className="nav-primary-separator">
+								<a>|</a>
+							</li>
+
+							{Object.keys(this.state.userInfo).length !== 0 ? (
+								this.state.userInfo.isAdmin ? (
+									<>
+										<li>
+											<Link to="/events/add">ADD AN EVENT!</Link>
+										</li>
+										<li>
+											<Link to="/signin-page" onClick={this.logoutHandler}>
+												LOGOUT
+											</Link>
+										</li>
+									</>
+								) : (
+									<li
+										style={{ width: "175px" }}
+										onClick={() =>
+											this.setState({
+												profileOpen: !this.state.profileOpen,
+											})
+										}
+										onMouseLeave={() =>
+											this.setState({
+												profileOpen: false,
+											})
+										}>
+										<Link className="nav-menu-opener">
+											{this.state.userInfo.name.toUpperCase()}
+											<font className="grey-text">{"(" + this.state.userInfo.celestaID.toUpperCase() + ")"}</font>
+										</Link>
+
+										{this.state.profileOpen && (
+											<div className="nav-desktop-secondary">
+												<Link className="red-text" to="/signin-page" onClick={this.logoutHandler}>
+													SIGN OUT
+												</Link>
+											</div>
+										)}
+									</li>
+								)
+							) : (
+								<>
+									<li>
+										<Link to="/signin-page">LOG IN</Link>
+									</li>
+									<li>
+										<Link to="/register-page" className="nav-desktop-register">
+											REGISTER
+										</Link>
+									</li>
+								</>
+							)}
 						</ul>
 
 						<div className="nav-but-wrap">
@@ -93,73 +142,8 @@ class ComponentsNavbar extends React.Component {
 					</header>
 					<nav>
 						<ul className="nav-mobile-primary cd-primary-nav">
-							{/* <NavItem>
-								<NavLink href="/">Home</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink href="/ca">Campus Ambasaddor</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink href="/Points">Live Points Table</NavLink>
-							</NavItem>
-
-							<NavItem>
-								<NavLink href="/events-page">Events</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink href="/gallery">Gallery</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink href="/sponsors">Sponsors</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink href="/Team">Our Team</NavLink>
-							</NavItem>
-
-							<NavItem>
-								<NavLink href="/contact-us-page">Contact Us</NavLink>
-							</NavItem>
-
-							{Object.keys(this.state.userInfo).length !== 0 ? (
-								<nav>
-									<ul>
-										<NavItem>
-											<Link to="/signin-page" onClick={this.logoutHandler}>
-												Logout
-											</Link>
-										</NavItem>
-										<NavItem>
-											<NavLink href="/profile-page">{this.state.userInfo.name}</NavLink>
-										</NavItem>
-									</ul>
-									<ul className="cd-secondary-nav">
-										{this.state.userInfo.isAdmin ? (
-											<li>
-												<Button>
-													<Link to="/events/add">Add an event!</Link>
-												</Button>
-											</li>
-										) : (
-											<Button>
-												<Link to="/events-page">Events</Link>
-											</Button>
-										)}
-									</ul>
-								</nav>
-							) : (
-								<ul>
-									<NavItem>
-										<NavLink href="/signin-page">Login</NavLink>
-									</NavItem>
-									<NavItem>
-										<NavLink href="/register-page">Register</NavLink>
-									</NavItem>
-								</ul>
-							)} */}
 							<li>
-								{/* <Button> */}
 								<Link to="/">HOME</Link>
-								{/* </Button> */}
 							</li>
 
 							<li
@@ -174,22 +158,17 @@ class ComponentsNavbar extends React.Component {
 									})
 								}>
 								<div>
-									<a className="nav-menu-opener">
-										THE FEST
-									</a>
-									<img src={arrow} className="nav-mobile-opener" style={this.state.secondaryOpen ? { transform: "translateY(-2px) rotate(0deg)" } : {}} />
+									<a className="nav-menu-opener">THE FEST</a>
+									<img src={arrow} className="nav-mobile-opener" style={this.state.secondaryOpen ? { transform: "translate(-10px, -3px) rotate(0deg)" } : {}} alt="" />
 								</div>
 
 								{this.state.secondaryOpen && (
 									<div className="nav-mobile-secondary">
-										{/* <li>THE FEST</li> */}
-										{/* <NavItem> */}
-										<NavLink href="/ca">CAMPUS AMBASADDOR</NavLink>
-										<NavLink href="/Points">LIVE POINTS TABLE</NavLink>
-										<NavLink href="/gallery">GALLERY</NavLink>
-										<NavLink href="/sponsors">SPONSORS</NavLink>
-										<NavLink href="/Team">OUR TEAM</NavLink>
-										{/* </NavItem> */}
+										<Link to="/ca">CAMPUS AMBASADDOR</Link>
+										<Link to="/Points">LIVE POINTS TABLE</Link>
+										<Link to="/gallery">GALLERY</Link>
+										<Link to="/sponsors">SPONSORS</Link>
+										<Link to="/Team">OUR TEAM</Link>
 									</div>
 								)}
 							</li>
@@ -197,6 +176,59 @@ class ComponentsNavbar extends React.Component {
 							<li>
 								<Link to="/events-page">EVENTS</Link>
 							</li>
+
+							{Object.keys(this.state.userInfo).length !== 0 ? (
+								this.state.userInfo.isAdmin ? (
+									<>
+										<li>
+											<Link to="/events/add">ADD AN EVENT!</Link>
+										</li>
+										<li>
+											<Link to="/signin-page" onClick={this.logoutHandler}>
+												SIGN OUT
+											</Link>
+										</li>
+									</>
+								) : (
+									<li
+										onClick={() =>
+											this.setState({
+												profileOpen: !this.state.profileOpen,
+											})
+										}
+										onMouseLeave={() =>
+											this.setState({
+												profileOpen: false,
+											})
+										}>
+										<div>
+											<a className="nav-menu-opener">
+												{this.state.userInfo.name.toUpperCase()}
+												<font className="grey-text">{"(" + this.state.userInfo.celestaID.toUpperCase() + ")"}</font>
+											</a>
+										</div>
+
+										{this.state.profileOpen && (
+											<div className="nav-mobile-secondary">
+												<Link className="red-text" to="/signin-page" onClick={this.logoutHandler}>
+													SIGN OUT
+												</Link>
+											</div>
+										)}
+									</li>
+								)
+							) : (
+								<>
+									<li>
+										<Link to="/signin-page">LOG IN</Link>
+									</li>
+									<li>
+										<Link to="/register-page" className="nav-desktop-register">
+											REGISTER
+										</Link>
+									</li>
+								</>
+							)}
 						</ul>
 					</nav>
 				</Container>
