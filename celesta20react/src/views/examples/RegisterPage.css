@@ -9,7 +9,7 @@ body{
 }
 .Registersty{
     color: black;
-    font-size: xx-large;
+    font-size: 50px;
     padding-left: 25px;
 }
 .msgbox{
@@ -22,7 +22,7 @@ body{
   display:flex;
   border: 1px solid #e9ecef;
   border-radius: 10px;
-  box-shadow: 1px 3px 10px #e9ecef;
+  box-shadow:  0 13px 43px 0px #020202;
   background-color: white;
   justify-content: center;
   /* margin-left: 100px; */
@@ -37,6 +37,8 @@ body{
   width: 100vw;
   margin: 2em auto;
 }
+
+
 #form >  input, .btn{
   border: 1px solid #e9ecef;
   padding: .9em 1em;
@@ -45,6 +47,8 @@ body{
   margin-right: 10px;
   height:49px;
   color: black;
+  /* border-color: #020202; */
+  /* box-shadow:  0 3px 3px 0px #29292967; */
 }
 #form > input:focus{
   outline: none;
@@ -55,6 +59,7 @@ body{
   color: white;
   font-size: 1em;
   cursor: pointer;
+  border-radius: 10px;
 }
 .flex{
   display: flex;
@@ -110,4 +115,15 @@ body{
     display: initial;
     /* max-width: 200px; */
   }
+}
+
+
+
+.btnfg{
+  height:5vh;
+  float: right;
+  color: #232222;
+  text-decoration: underline;
+  border-radius: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
