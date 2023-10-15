@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { Alert } from "antd";
 import { Link } from "react-router-dom";
 import  "./RegisterPage.css"
+import "../../font.css";
 
 // reactstrap components
 import {
@@ -244,7 +245,7 @@ class RegisterPage extends React.Component {
                     />
                     <Input 
                       type="password" 
-                      placeholder='Create New Password'
+                      placeholder='Create Password'
                       onChange={(e)=>{
                         this.setState({password: e.target.value})
                       }} 
@@ -270,13 +271,13 @@ class RegisterPage extends React.Component {
                         this.setState({refId: e.target.value})
                       }} 
                     />
-                    <button className='btn'>Register</button>
+                    <button className='bttn'>Register</button>
                 </Form>
                 <div>
-                  <h4 style={{color:"black",textAlign:"center"}}>Already Registered?</h4>
+                  <h4 className="alrdyregis">Already Registered?</h4>
                 </div>
                 <div style={{textAlign:"center"}}>
-                <a href="" style={{color:"black",textAlign:"center",textDecoration: 'underline black'}}>LogIN</a>
+                <a href="" className="login">Login Here</a>
                 </div>
             </div>
             <div className="row-2">
