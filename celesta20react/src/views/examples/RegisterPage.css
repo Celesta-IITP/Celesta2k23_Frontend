@@ -1,0 +1,113 @@
+body.register-page{
+    background-color: white;
+}
+body{
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.Registersty{
+    color: black;
+    font-size: xx-large;
+    padding-left: 25px;
+}
+.msgbox{
+    color: black;
+    padding-left: 25px;
+}
+.register{
+  max-width: 978px;
+  width: 100vw;
+  display:flex;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  box-shadow: 1px 3px 10px #e9ecef;
+  background-color: white;
+  justify-content: center;
+  /* margin-left: 100px; */
+  /* border: 2px solid green; */
+  padding: auto;
+  display: flex;
+
+  /* position: relative; */
+}
+#form{
+  max-width: 400px;
+  width: 100vw;
+  margin: 2em auto;
+}
+#form >  input, .btn{
+  border: 1px solid #e9ecef;
+  padding: .9em 1em;
+  border-radius: 2px;
+  margin-left: 20px;
+  margin-right: 10px;
+  height:49px;
+  color: black;
+}
+#form > input:focus{
+  outline: none;
+}
+
+#form > .btn{
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+.flex{
+  display: flex;
+  /* border: 2px solid red; */
+
+  gap: 1em;
+}
+.flex-col{
+  flex-direction: column;
+  /* max-width: fit-content; */
+  /* border: 2px solid rgba(0, 255, 229, 0.228); */
+  /* max-height: 400px; */
+  /* padding: 15px; */
+  padding-left: 15 px;
+  padding-right: 15px;
+  /* padding-bottom: 40px; */
+  /* margin-bottom: 20px; */
+  max-width: 100px;
+}
+.fields{
+  color: black;
+}
+.register .row-1{
+  /* margin: auto; */
+  /* max-width: 576px; */
+  /* border: 2px solid hotpink; */
+  /* padding: 3em 0; */
+  /* padding-top: 20px; */
+  /* padding: auto; */
+  /* margin-left: 50px; */
+}
+.mid-section{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+}
+.register .row-2 img{
+  /* max-width: 400px; */
+  object-fit: cover;
+  align-self: flex-end;
+  /* border-top-right-radius: 5px; */
+  padding: auto;
+  /* border-radius: 15px; */
+  border-radius: 0px 15px 15px 0px;
+  /* border-bottom-right-radius: 5px; */
+  height: 100vh;
+  display: none;
+}
+@media screen and (min-width: 576px)  {
+  .register .row-2 img{
+    display: initial;
+    /* max-width: 200px; */
+  }
+}
