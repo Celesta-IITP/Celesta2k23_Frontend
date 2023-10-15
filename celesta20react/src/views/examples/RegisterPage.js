@@ -206,6 +206,11 @@ class RegisterPage extends React.Component {
     const { msg } = this.state;
     return (
       <>
+      {/* Temparary fix */}
+      <div style={{
+        height:"90px"
+      }}>
+      </div>
         <Navbar />
         <div className="wrapper">
           <div className="page-header">
@@ -282,7 +287,7 @@ class RegisterPage extends React.Component {
           </div>
           <Footer/>
         </div>
-      </div>
+      </>
     );
   }
 }
