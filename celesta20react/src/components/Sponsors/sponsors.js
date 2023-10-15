@@ -13,34 +13,43 @@ const Sponsors = ( ) =>  {
 
   return(
 
-
-      <div className="sp-main">
+   <div className="spbg">
+      {/* <div className="sp-main"> */}
         <Navbar />
-        {/*<h1 className="sp-head">Sponsors</h1>*/}
-        <div className="sp-slider" style={{"background-image": "url(https://i.ibb.co/92HJxz2/team-bg.jpg)"}}>
+        <br></br> <br></br> <br></br> <br></br> <br></br>
+        <h1 className="sp-head">Sponsors</h1>
+        <br></br> <br></br>
+        <div className="sp-slider" style={{"background-image": "url()"}}>
 
-          <br/><br/><br/><br/>
+          <br/><br/>
 
-          <h1 className="sp_head2 heading"> OUR LAST YEAR SPONSORS! </h1>
-          <div>
-           <br/>
-
-          </div>
+          <h1 className=""> OUR LAST YEAR SPONSORS! </h1>
+          
           {sponsdata.map(( x , i) =>{
             return(
 
-          <div className="sp_img " >
-            <div key={i}>
-            <h1 className="heading">{x.name}</h1>
-            {x.image.map((y) => <img className="sp pa5" src={`${y}`} alt="sponsor" />)}
+              <section class="room top" id="room">
+            <div className="container"key={i}>
+            <div class="heading_top flex1">
+        <div class="heading">
+          <h5>CELESTA VERDANT ODYSSEY</h5>
+          <h2>{x.name}</h2>
+        </div>
+        
+      </div>
+            <div className="content grid">
+            {x.image.map((y) => <img className="box" src={`${y}`} alt="sponsor" />)}
+            </div>
             </div>
 
-          </div>
+         </section>
       )
             })}
         </div>
+        {/* </div> */}
         <Footer />
-      </div>
+      
+       </div>
 
   )
 }
