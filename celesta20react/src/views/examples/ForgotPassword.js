@@ -167,7 +167,7 @@ class ForgotPage extends React.Component {
                       }}
                     />
                     <br></br><br></br>
-                    <button className='btn'>Reset Password</button>
+                    <button className='bttn'>Forgot Password</button>
                     <br>
                     </br>
                     <div>

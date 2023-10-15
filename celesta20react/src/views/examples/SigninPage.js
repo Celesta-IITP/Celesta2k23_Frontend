@@ -203,7 +203,7 @@ class SigninPage extends React.Component {
                 <br></br><br></br>
                 </div>
                         </Link>
-                        <Button
+                        {/* <Button
                           className="btn-round"
                           color="white"
                           size="lg"
@@ -211,7 +211,8 @@ class SigninPage extends React.Component {
                         >
                           {" "}
                           Login
-                        </Button>
+                        </Button> */}
+                        <button className='bttn'onClick={this.submitHandler} >Login</button>
                 </Form>
                 <CardFooter>
                 

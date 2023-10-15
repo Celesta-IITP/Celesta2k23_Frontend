@@ -277,7 +277,7 @@ class RegisterPage extends React.Component {
                   <h4 className="alrdyregis">Already Registered?</h4>
                 </div>
                 <div style={{textAlign:"center"}}>
-                <a href="" style={{color:"black",textAlign:"center",textDecoration: 'underline black'}}>LogIN</a>
+                <a href="/signin-page" style={{color:"black",textAlign:"center",textDecoration: 'underline black'}}>LogIN</a>
                 </div>
             </div>
             <div className="row-2">
