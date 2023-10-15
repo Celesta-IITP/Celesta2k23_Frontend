@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component, Link } from "react";
-import Navbar from "../Navbars/IndexNavbar";
+import Navbar from "../Navbars/Navbar";
 import Footer from "../Footer/Footer.js";
 import "./notFound.css";
 

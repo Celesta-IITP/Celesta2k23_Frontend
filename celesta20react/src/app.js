@@ -17,7 +17,8 @@ import SigninPage from "views/examples/SigninPage.js";
 import Sponsors from "components/Sponsors/sponsors.js";
 import Stats from "components/Stats/stats.js";
 import NotFound from "components/NotFound/notFound.js";
-import Events from "./components/Events/Events";
+// import Events from "components/Events/Events.js";
+import Events from "components/events"
 import OnlineEvents from "./components/Explore/Online/online_explore";
 import InformalEvents from "./components/Explore/Informal/info_explore";
 import GamiacsEvents from "./components/Explore/Gamiacs/gamiacs_explore";

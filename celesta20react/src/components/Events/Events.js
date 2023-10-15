@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { EventsFunctions } from "./EventsFunctions";
 import "./Events.css";
-import IndexNavbar from "../Navbars/IndexNavbar";
+import Navbar from "../Navbars/Navbar";
 
 class Events extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Events extends Component {
   render() {
     return (
       <div className="demo-cont">
-        <IndexNavbar style={{ backgroundColor: "black" }} />
+        <Navbar />
         {/* <br/>
 		<br/>
 		<br/>

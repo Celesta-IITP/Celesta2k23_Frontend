@@ -1,5 +1,5 @@
 import React, { Component, Link } from "react";
-import Navbar from "../Navbars/IndexNavbar";
+import Navbar from "../Navbars/Navbar";
 import "./ca.css";
 import axios from "axios";
 

@@ -122,7 +122,8 @@ body, div, dl, dt, dd, ul, ol, li, pre, form, p, blockquote, th, td {
   width: 60px;
   background: rgba(255, 255, 255, 0.8);
   height: 2px;
-  display: block;
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, Fragment } from "react";
 import Tabletop from "tabletop";
-import ExamplesNavbar from "components/Navbars/IndexNavbar.js";
+import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import "./pts.css";
 
@@ -19,7 +19,7 @@ export default function App() {
   return (
     <>
       <div className="sp-main">
-        <ExamplesNavbar />
+        <Navbar />
 
         <div style={{ height: "150px" }}></div>
 
