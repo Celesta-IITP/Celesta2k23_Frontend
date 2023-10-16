@@ -123,7 +123,7 @@ class SigninPage extends React.Component {
         email,
         password,
       };
-      loginUser(user);
+      this.props.loginUser(user);
     };
     submitHandler = (e) => {
       e.preventDefault();
