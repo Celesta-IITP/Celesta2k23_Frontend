@@ -5,7 +5,8 @@ import "assets/css/nucleo-icons.css";
 import "assets/scss/blk-design-system-react.scss?v=1.1.0";
 import "assets/demo/demo.css";
 
-import Index from "pages/Index.js";
+// import Index from "pages/Index.js";
+import HomePage from "pages/HomePage";
 import LandingPage from "views/examples/LandingPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import ForgotPage from "views/examples/ForgotPassword.js";
@@ -43,7 +44,8 @@ class App extends React.Component {
             path="/"
             exact="true"
             // front page
-            render={(props) => <Index {...props} />}
+            // render={(props) => <Index {...props} />}
+            render={(props) => <HomePage {...props} />}
           />
           <Route
             path="/landing-page"
