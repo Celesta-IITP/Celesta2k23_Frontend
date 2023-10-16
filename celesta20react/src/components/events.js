@@ -121,7 +121,7 @@ const Events = () => {
     ])
 
     useEffect(() => {
-        let host = process.env.NEXT_PUBLIC_HOST
+		let host = process.env.REACT_APP_PUBLIC_HOST;
 
         async function callAPI() {
             try {
@@ -142,12 +142,7 @@ const Events = () => {
     return (
         <div className={styles.mainContainer}>
 			<Navbar />
-            <head>
-                <title>Events - Anwesha 2023</title>
-                <meta name="description" content="Multicity-Anwesha 2023" />
-                <link rel="icon" href="./logo_no_bg.svg" />
-            </head>
-            <div style={{ height: 100 }}></div>
+			<div style={{ height: 150, display: "unset" }}></div>
             <div className={styles.container}>
                 <h1>Events</h1>
 

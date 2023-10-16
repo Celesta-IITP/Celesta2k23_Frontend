@@ -1,6 +1,6 @@
 import React from 'react'
 // import { useRouter } from 'next/router'
-// const host = process.env.NEXT_PUBLIC_HOST
+// const host = process.env.REACT_APP_PUBLIC_HOST
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer, toast } from 'react-toastify'
 

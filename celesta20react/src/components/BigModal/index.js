@@ -17,7 +17,7 @@ const Modal = (props) => {
             <div
                 id="backdrop"
                 className={styles.modal}
-                onClick={() => props.closeHandler()}
+                onClick={() => props.closeHandler(false)}
             >
                 <div
                     className={styles.modalContent}
@@ -33,7 +33,7 @@ const Modal = (props) => {
                             alt="Closebtn"
                             height={40}
                             width={40}
-                            onClick={() => props.closeHandler()}
+                            onClick={() => props.closeHandler(false)}
                             style={{ cursor: 'pointer' }}
                         />
                     </div>

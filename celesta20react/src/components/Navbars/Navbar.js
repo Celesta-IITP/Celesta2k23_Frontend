@@ -25,6 +25,12 @@ class ComponentsNavbar extends React.Component {
 		this.props.logoutUser();
 		/*this.props.history.push("/");*/
 	};
+	componentDidMount() {
+		document.getElementsByClassName("cd-header").item(0).classList.remove("menu-is-open");
+		document.getElementsByClassName("menu-icon").item(0).classList.remove("open");
+		document.getElementsByClassName("cd-primary-nav").item(0).classList.remove("is-visible");
+		document.body.classList.remove("overflow-hidden");
+	}
 
 	render() {
 		return (
@@ -63,7 +69,7 @@ class ComponentsNavbar extends React.Component {
 								{this.state.secondaryOpen && (
 									<div className="nav-desktop-secondary">
 										<Link to="/ca">CAMPUS AMBASADDOR</Link>
-										<Link to="/Points">LIVE POINTS TABLE</Link>
+										{/* <Link to="/Points">LIVE POINTS TABLE</Link> */}
 										<Link to="/gallery">GALLERY</Link>
 										<Link to="/sponsors">SPONSORS</Link>
 										<Link to="/Team">OUR TEAM</Link>
@@ -135,7 +141,6 @@ class ComponentsNavbar extends React.Component {
 						<div
 							className="nav-but-wrap"
 							onClick={() => {
-								console.log(document.getElementsByClassName("cd-header").item(0));
 								document.getElementsByClassName("cd-header").item(0).classList.toggle("menu-is-open");
 								document.getElementsByClassName("menu-icon").item(0).classList.toggle("open");
 								if (document.getElementsByClassName("cd-primary-nav").item(0).classList.contains("is-visible")) {
@@ -179,7 +184,7 @@ class ComponentsNavbar extends React.Component {
 								{this.state.secondaryOpen && (
 									<div className="nav-mobile-secondary">
 										<Link to="/ca">CAMPUS AMBASADDOR</Link>
-										<Link to="/Points">LIVE POINTS TABLE</Link>
+										{/* <Link to="/Points">LIVE POINTS TABLE</Link> */}
 										<Link to="/gallery">GALLERY</Link>
 										<Link to="/sponsors">SPONSORS</Link>
 										<Link to="/Team">OUR TEAM</Link>

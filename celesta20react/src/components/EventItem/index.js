@@ -92,7 +92,7 @@ const Index = ( {event} ) => {
                     <Modal
                         title={event.name}
                         body={event}
-                        closeHandler={(prev)=>setModal(!prev)}
+                        closeHandler={setModal}
                     />
                 </>
             )}

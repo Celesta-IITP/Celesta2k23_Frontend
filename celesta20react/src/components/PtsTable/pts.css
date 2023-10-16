@@ -30,7 +30,7 @@ body {
     height: 100vh;
     background-color: var(--body-background);
     color: var(--body-text);
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     margin: 0;
 }
 h1 {

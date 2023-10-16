@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 // import { useRouter } from 'next/router'
 import { AuthContext } from '../authContext'
-const host = process.env.NEXT_PUBLIC_HOST
+const host = process.env.REACT_APP_PUBLIC_HOST
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
