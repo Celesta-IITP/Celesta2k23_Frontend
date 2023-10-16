@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
 .cd-logo {
 	height: 100%;
 	padding: 10px 0;
+}
+
+.nav-logo-verdant {
+	margin-left: 30px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+	.nav-logo-verdant {
+		display: none;
+	}
 }
 
 .nav-desktop-primary {
@@ -23,7 +35,7 @@
 .nav-desktop-primary a {
 	display: flex;
 	align-items: center;
-	font-family: monospace;
+	font-family: "Montserrat", monospace;
 	letter-spacing: 1px;
 	font-weight: 700;
 	height: 80px;
@@ -84,11 +96,11 @@
 }
 
 .red-text {
-	color: #FF7575 !important;
+	color: #ff7575 !important;
 }
 
 .grey-text {
-	color: #FFF8 !important;
+	color: #fff8 !important;
 }
 
 .nav-mobile-primary {
@@ -119,7 +131,7 @@
 	}
 
 	.nav-mobile-primary a {
-		font-family: monospace;
+		font-family: "Montserrat", monospace;
 		letter-spacing: 1px;
 		font-weight: 700;
 		color: white;

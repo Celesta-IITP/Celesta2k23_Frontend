@@ -98,7 +98,7 @@ body {
 		/* when the user scrolls down, we hide the header right above the viewport */
 		position: fixed;
 		top: -80px;
-		background-color: rgba(2, 23, 37, 0.96);
+		/* background-color: rgba(2, 23, 37, 0.96); */
 		-webkit-transition: -webkit-transform 0.3s;
 		-moz-transition: -moz-transform 0.3s;
 		transition: transform 0.3s;

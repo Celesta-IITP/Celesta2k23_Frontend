@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo_3.png";
+import logoVerdant from "../../assets/img/Logo - Verdant Odyssey.svg";
 import arrow from "../../assets/img/arrow.svg";
 import { compose } from "redux";
 import { connect } from "react-redux";
@@ -17,8 +18,6 @@ class ComponentsNavbar extends React.Component {
 			secondaryOpen: false,
 			profileOpen: false,
 			collapseOpen: false,
-			// userInfo: { name: "Happy", celestaID: "CLT1234" },
-			// userInfo: { isAdmin: true, celestaID: "CLT1234" },
 			userInfo: this.props.user ? this.props.user : {},
 		};
 	}
@@ -26,6 +25,7 @@ class ComponentsNavbar extends React.Component {
 		this.props.logoutUser();
 		/*this.props.history.push("/");*/
 	};
+
 	render() {
 		return (
 			<Navbar className="fixed-top" color-on-scroll="100" expand="lg">
@@ -35,6 +35,7 @@ class ComponentsNavbar extends React.Component {
 							<ul>
 								<NavLink href="/">
 									<img src={logo} alt="Logo" style={{ maxHeight: "45px" }} />
+									<img src={logoVerdant} className="nav-logo-verdant" alt="Logo" style={{ maxHeight: "45px" }} />
 								</NavLink>
 							</ul>
 						</div>
@@ -131,7 +132,20 @@ class ComponentsNavbar extends React.Component {
 							)}
 						</ul>
 
-						<div className="nav-but-wrap">
+						<div
+							className="nav-but-wrap"
+							onClick={() => {
+								console.log(document.getElementsByClassName("cd-header").item(0));
+								document.getElementsByClassName("cd-header").item(0).classList.toggle("menu-is-open");
+								document.getElementsByClassName("menu-icon").item(0).classList.toggle("open");
+								if (document.getElementsByClassName("cd-primary-nav").item(0).classList.contains("is-visible")) {
+									document.getElementsByClassName("cd-primary-nav").item(0).classList.remove("is-visible");
+									document.body.classList.remove("overflow-hidden");
+								} else {
+									document.getElementsByClassName("cd-primary-nav").item(0).classList.add("is-visible");
+									document.body.classList.add("overflow-hidden");
+								}
+							}}>
 							<div className="menu-icon hover-target">
 								<span className="menu-icon__line menu-icon__line-left"></span>
 								<span className="menu-icon__line menu-icon__line-up"></span>
