@@ -48,6 +48,12 @@
 
 .modal_head h1 {
     font-size: 60px !important;
+	margin: 0;
+}
+
+.modal_head svg {
+	position: relative;
+	bottom: calc(100% - 35px);
 }
 
 @media screen and (max-width: 950px) {
@@ -70,6 +76,7 @@
 
 .modal_body {
     padding: 10px;
+	color: black;
     background-color: #fff;
     border-radius: 0 0 5px 5px;
     max-width: 600px;
@@ -88,7 +95,7 @@
     overflow: hidden;
     padding-block: 47px;
 }
-.btn {
+.modal_register_button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,6 +109,7 @@
     cursor: pointer;
     background-color: #000000;
     color: #ffffff;
+    border: none;
     outline: none;
     text-decoration: none;
     padding: 20px 59px;
@@ -125,6 +133,13 @@
     outline: none;
     text-decoration: none;
     padding: 17px 59px;
+}
+
+.modal_register_button:hover, .rulebtn:hover {
+	transition: all 0.5s ease;
+	background-color: #fff;
+	color: black;
+	transform: translateY(-5px);
 }
 
 .modal_footer :nth-child(2) {
