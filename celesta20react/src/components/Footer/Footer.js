@@ -46,7 +46,7 @@ export default function Footer() {
 							</div>
 						</div>
 						<div className="col-md-6 col-lg-3 col-12 ft-2">
-							<h5>Quick Links</h5>
+							<h3>Quick Links</h3>
 							<ul>
 								<li className="nav-item">
 									<a href="/events-page">Events</a>
@@ -69,7 +69,7 @@ export default function Footer() {
 							</ul>
 						</div>
 						<div className="col-md-6 col-lg-4 col-12 ft-3">
-							<h5>Contact Us</h5>
+							<h3>Contact Us</h3>
 							{/* <p><i className="fa-solid fa-envelope"></i> celesta.iitp@gmail.com</p> */}
 							<a href="mailto:celesta.iitp@gmail.com" >
 								celesta.iitp@gmail.com
