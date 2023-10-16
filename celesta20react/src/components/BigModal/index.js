@@ -103,7 +103,7 @@ const Modal = (props) => {
                                           ' members'}
                                 </div>
                                 {props.body.registration_fee ? (
-                                    !userData.isAuth ? (
+                                    // !userData.isAuth ? (
                                         <div>
                                             Registration Fee &nbsp;
                                             {/* <img src="/assets/payment.svg" /> */}
@@ -112,17 +112,17 @@ const Modal = (props) => {
                                                 ₹{props.body.registration_fee}
                                             </span>
                                         </div>
-                                    ) : userData.state.user.user_type !==
-                                      'iitp_student' ? (
-                                        <div>
-                                            Registration Fee &nbsp;
-                                            {/* <img src="/assets/payment.svg" /> */}
-                                            <span style={{ fontWeight: '700' }}>
-                                                {' '}
-                                                ₹{props.body.registration_fee}
-                                            </span>
-                                        </div>
-                                    ) : null
+                                    // ) : userData.state.user.user_type !==
+                                    //   'iitp_student' ? (
+                                    //     <div>
+                                    //         Registration Fee &nbsp;
+                                    //         {/* <img src="/assets/payment.svg" /> */}
+                                    //         <span style={{ fontWeight: '700' }}>
+                                    //             {' '}
+                                    //             ₹{props.body.registration_fee}
+                                    //         </span>
+                                    //     </div>
+                                    // ) : null
                                 ) : null}
                             </div>
                             {props.body.registration_deadline ? (

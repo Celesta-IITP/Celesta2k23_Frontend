@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import classnames from "classnames";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { Alert } from "antd";
+import { Link } from "react-router-dom";
+import  "./RegisterPage.css"
+import "../../font.css";
+
 // reactstrap components
 import {
   Button,
@@ -23,12 +26,23 @@ import {
   Container,
   Row,
   Col,
+  Dropdown,
+  ButtonDropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  InputGroupButtonDropdown,
 } from "reactstrap";
-import { loginUser, resetPassword } from "redux/actions/authActions";
-import { clearErrors } from "redux/actions/errorActions";
+
 // core components
+import { loginUser, resetPassword } from "redux/actions/authActions";
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
+import { USER_LOADING } from "redux/actions/types";
+import { registerUser } from "redux/actions/authActions";
+import { clearErrors } from "redux/actions/errorActions";
+import ValidatedLoginForm from "./ValidateLogin";
+import { serverUrl } from "../../config";
 import { returnErrors } from "redux/actions/errorActions";
 
 class ResetPage extends React.Component {
@@ -120,7 +134,7 @@ class ResetPage extends React.Component {
         confirmPassword,
         code,
       };
-      await this.props.resetPassword(user);
+      await resetPassword(user);
       console.log(this.props.error.message);
       if (this.props.error.message === "") this.props.history.push("/");
     }
@@ -138,239 +152,114 @@ class ResetPage extends React.Component {
     const { msg } = this.state;
     return (
       <>
+      {/* Temparary fix */}
+      <div style={{
+        height:"90px"
+      }}>
+      </div>
         <Navbar />
         <div className="wrapper">
           <div className="page-header">
             <div className="page-header-image" />
-            <div className="content">
-              <Container>
-                <Row>
-                  <Col className="offset-lg-0 offset-md-3" lg="5" md="6">
-                    <div
-                      className="square square-7"
-                      id="square7"
-                      style={{ transform: this.state.squares7and8 }}
+            <section className="mid-section">
+            <div className="register">
+            <div className="row-1">
+              <div>
+              <div className="col d-flex justify-content-center"><h4 className="Registersty">Reset</h4></div>
+              </div>
+              <br></br><br></br>
+              {/* <div><h5 className="msgbox">This is a message box</h5></div> */}
+                <Form 
+                  id='form' 
+                  className='flex flex-col'
+                  onSubmit={this.submitHandler} 
+                >
+                    <Input 
+                      type="text"
+                      placeholder="Code which was sent to your registered mail!"
+                      className={classnames({
+                        "input-group-focus": this.state.fullNameFocus,
+                      })}
+                      onFocus={(e) =>
+                        this.setState({ fullNameFocus: true })
+                      }
+                      onBlur={(e) =>
+                        this.setState({ fullNameFocus: false })
+                      }
+                      onChange={(e) => {
+                        this.setState({ code: e.target.value });
+                        console.log(this.state.code);
+                      }} 
                     />
-                    <div
-                      className="square square-8"
-                      id="square8"
-                      style={{ transform: this.state.squares7and8 }}
+                    <Input 
+                      type="text" 
+                      placeholder='Email' 
+                      className={classnames({
+                        "input-group-focus": this.state.emailFocus,
+                      })}
+                      onFocus={(e) =>
+                        this.setState({ emailFocus: true })
+                      }
+                      onBlur={(e) =>
+                        this.setState({ emailFocus: false })
+                      }
+                      onChange={(e) => {
+                        this.setState({ email: e.target.value });
+                        console.log(this.state.email);
+                      }}
                     />
-                    <Card className="card-register">
-                      <CardHeader>
-                        <CardImg
-                          alt="..."
-                          src={require("assets/img/square-purple-1.png")}
-                        />
-                        <CardTitle tag="h2">Reset!</CardTitle>
-                        <Row>
-                          <Button
-                            className="btn-icon btn-round"
-                            href="#pablo"
-                            target="_blank"
-                            color="neutral"
-                            onClick={(e) => e.preventDefault()}
-                            style={{ marginLeft: "20px" }}
-                          >
-                            <i className={"fab fa-twitter"} />
-                          </Button>
-                          <Button
-                            className="btn-icon btn-round"
-                            href="#pablo"
-                            target="_blank"
-                            color="neutral"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            <i className={"fab fa-facebook"} />
-                          </Button>
-                          <Button
-                            className="btn-icon btn-round"
-                            href="#pablo"
-                            target="_blank"
-                            color="neutral"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            <i className={"fab fa-google-plus-g"} />
-                          </Button>
-                        </Row>
-                      </CardHeader>
-                      <div>
-                        {msg ? (
-                          <h2
-                            style={{
-                              fontSize: "25px",
-                              color: "black",
-                              backgroundImage:
-                                "linear-gradient(to bottom right, pink, violet)",
-                              textAlign: "center",
-                              marginBottom: "30px",
-                            }}
-                          >
-                            {msg}!
-                          </h2>
-                        ) : null}
-                      </div>
-                      <CardBody>
-                        <h6>Or Be Classic..</h6>
-                        <Form className="form">
-                          <InputGroup
-                            className={classnames({
-                              "input-group-focus": this.state.fullNameFocus,
-                            })}
-                          >
-                            <InputGroupAddon addonType="prepend">
-                              <InputGroupText>
-                                <i className="tim-icons icon-single-02" />
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <Input
-                              placeholder="Code which was sent to your registered mail!"
-                              type="text"
-                              onFocus={(e) =>
-                                this.setState({ fullNameFocus: true })
-                              }
-                              onBlur={(e) =>
-                                this.setState({ fullNameFocus: false })
-                              }
-                              onChange={(e) => {
-                                this.setState({ code: e.target.value });
-                                console.log(this.state.code);
-                              }}
-                            />
-                          </InputGroup>
-                          <InputGroup
-                            className={classnames({
-                              "input-group-focus": this.state.emailFocus,
-                            })}
-                          >
-                            <InputGroupAddon addonType="prepend">
-                              <InputGroupText>
-                                <i className="tim-icons icon-email-85" />
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <Input
-                              placeholder="Email"
-                              type="text"
-                              onFocus={(e) =>
-                                this.setState({ emailFocus: true })
-                              }
-                              onBlur={(e) =>
-                                this.setState({ emailFocus: false })
-                              }
-                              onChange={(e) => {
-                                this.setState({ email: e.target.value });
-                                console.log(this.state.email);
-                              }}
-                            />
-                          </InputGroup>
-                          <InputGroup
-                            className={classnames({
-                              "input-group-focus": this.state.passwordFocus,
-                            })}
-                          >
-                            <InputGroupAddon addonType="prepend">
-                              <InputGroupText>
-                                <i className="tim-icons icon-lock-circle" />
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <Input
-                              placeholder="Password"
-                              type="text"
-                              onFocus={(e) =>
-                                this.setState({ passwordFocus: true })
-                              }
-                              onBlur={(e) =>
-                                this.setState({ passwordFocus: false })
-                              }
-                              onChange={(e) => {
-                                this.setState({ password: e.target.value });
-                              }}
-                            />
-                          </InputGroup>
-                          <InputGroup
-                            className={classnames({
-                              "input-group-focus": this.state
-                                .confirmPasswordFocus,
-                            })}
-                          >
-                            <InputGroupAddon addonType="prepend">
-                              <InputGroupText>
-                                <i className="tim-icons icon-lock-circle" />
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <Input
-                              placeholder="Confirm Password"
-                              type="text"
-                              onFocus={(e) =>
-                                this.setState({ confirmPasswordFocus: true })
-                              }
-                              onBlur={(e) =>
-                                this.setState({ confirmPasswordFocus: false })
-                              }
-                              onChange={(e) => {
-                                this.setState({
-                                  confirmPassword: e.target.value,
-                                });
-                              }}
-                            />
-                          </InputGroup>
-                        </Form>
-                      </CardBody>
-                      <CardFooter>
-                        <Button
-                          className="btn-round"
-                          color="primary"
-                          size="lg"
-                          onClick={this.submitHandler}
-                        >
-                          {" "}
-                          Reset Password
-                        </Button>
-                      </CardFooter>
-                    </Card>
-                  </Col>
-                </Row>
-                <div className="register-bg" />
-                <div
-                  className="square square-1"
-                  id="square1"
-                  style={{ transform: this.state.squares1to6 }}
-                />
-                <div
-                  className="square square-2"
-                  id="square2"
-                  style={{ transform: this.state.squares1to6 }}
-                />
-                <div
-                  className="square square-3"
-                  id="square3"
-                  style={{ transform: this.state.squares1to6 }}
-                />
-                <div
-                  className="square square-4"
-                  id="square4"
-                  style={{ transform: this.state.squares1to6 }}
-                />
-                <div
-                  className="square square-5"
-                  id="square5"
-                  style={{ transform: this.state.squares1to6 }}
-                />
-                <div
-                  className="square square-6"
-                  id="square6"
-                  style={{ transform: this.state.squares1to6 }}
-                />
-              </Container>
+                    <Input 
+                      type="text" 
+                      placeholder="Password"
+                      className={classnames({
+                        "input-group-focus": this.state.passwordFocus,
+                      })}
+                      onFocus={(e) =>
+                        this.setState({ passwordFocus: true })
+                      }
+                      onBlur={(e) =>
+                        this.setState({ passwordFocus: false })
+                      }
+                      onChange={(e) => {
+                        this.setState({ password: e.target.value });
+                      }} 
+                    />
+                    <Input 
+                      type="text"
+                      placeholder="Confirm Password" 
+                       className={classnames({
+                        "input-group-focus": this.state
+                          .confirmPasswordFocus,
+                      })}
+                      onFocus={(e) =>
+                        this.setState({ confirmPasswordFocus: true })
+                      }
+                      onBlur={(e) =>
+                        this.setState({ confirmPasswordFocus: false })
+                      }
+                      onChange={(e) => {
+                        this.setState({
+                          confirmPassword: e.target.value,
+                        });
+                      }}
+                    />
+                    <br></br><br></br>
+                    <button className='bttn'>Reset Password</button>
+                </Form>
+                
+            </div>
+            <div className="row-2">
+                <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/99478938/275152281-153aa4ef-93ae-46b9-92e8-5639b16f463d.png" alt="" />
             </div>
           </div>
-          <Footer />
+        </section>
+          </div>
+          <Footer/>
         </div>
       </>
     );
   }
 }
-
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
   isLoading: state.auth.isLoading,
