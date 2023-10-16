@@ -125,20 +125,20 @@ const Events = () => {
 
         async function callAPI() {
             try {
-                const res = await fetch(`${host}/event/allevents`, {
-                    method: 'GET',
+                const res = await fetch(`${host}/api/events/detailed`, {
+					method: "GET",
                     headers: {
-                        'Content-Type': 'application/json',
+                        "Content-Type": "application/json",
                     },
-                })
-                const data = await res.json()
-                setEvents(data)
+                });
+				const data = await res.json();
+				setEvents(data);
             } catch (e) {
-                console.log('Failed to fetch')
+                console.log("Failed to fetch");
             }
         }
-        callAPI()
-    }, [])
+        callAPI();
+    }, []);
     return (
         <div className={styles.mainContainer}>
 			<Navbar />
@@ -148,11 +148,11 @@ const Events = () => {
 
                 <div className={styles.content}>
                     {events.map((event, index) => {
-                        return <EventItem event={event} key={index} />
+                        return <EventItem event={event} key={index} />;
                     })}
                 </div>
             </div>
         </div>
-    )
-}
-export default Events
+    );
+};
+export default Events;

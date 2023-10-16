@@ -115,7 +115,7 @@ class ForgotPage extends React.Component {
       });
     };
     handleCreate = async (email) => {
-      await this.props.forgotPassword(email);
+      await forgotPassword(email);
       console.log(this.props.error.message);
       if (this.props.error.message === "") this.props.history.push("/reset-page");
     };

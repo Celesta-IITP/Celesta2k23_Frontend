@@ -69,20 +69,20 @@ const Index = ( {event} ) => {
                             }
                             alt="Fest Image"
                             width={300}
-                            height={300}
-                            style={{ borderRadius: 15 }}
-                            objectfit={'contain'}
+                            style={{ borderRadius: 15, aspectRatio: "1" }}
+                            objectFit={'contain'}
+                        
                         />
                     </div>
                     <p className={styles.img__description}>
-                        <span style={{ marginBottom: '10px' }}>
+                        {/* <span style={{ marginBottom: '10px' }}>
                             <Image
                                 src="/events/Vector.png"
                                 width={70}
                                 height={70}
                                 alt="Fest Image overlay"
                             />
-                        </span>{' '}
+                        </span>{' '} */}
                     </p>
                 </div>
                 <div className={styles.eventName}>{event.name}</div>
