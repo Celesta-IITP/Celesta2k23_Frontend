@@ -3,34 +3,62 @@
 .landing_background_verdant {
 	background-image: url("../assets/img/LandingPageHeroBg.webp");
 	background-size: contain;
-	background-repeat: no-repeat;
+	/* background-repeat: no-repeat; */
+	background-position: 0 40px;
+	width: 100%;
+	height: 75vw;
+}
+
+.landing_background_odyssey {
+	width: 100%;
+	position: absolute;
+	top: 40px;
+	z-index: 0;
 }
 
 .landing_hero {
 	position: relative;
-	top: 10.390625vw;
+	top: max(10.390625vw, 110px);
 	left: 50%;
 	width: 47.265625vw;
 	height: auto;
+	animation-name: up-down;
+	animation-duration: 4s;
+	animation-delay: 2.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes up-down {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(min(40px, 5vw));
+	}
+	100% {
+		transform: translateY(0px);
+	}
 }
 
 .landing_title {
 	position: absolute;
 	left: 5.234375vw;
-	top: 19vw;
+	top: max(22vw, 150px);
 	font-family: "Montserrat";
 }
 
 .landing_title h1 {
 	color: white;
 	text-align: left;
-	font-size: 67.224px;
+	font-size: max(calc(100vw / 22), 35px);
 	letter-spacing: -1.158px;
 	font-weight: 700;
 }
 
 .landing_title h2 {
+	max-width: 75vw;
 	font-size: 20.524px;
+	font-size: max(calc(100vw / 62), 16px);
 	font-weight: 600;
 }
 
@@ -45,6 +73,7 @@
 	font-size: 16px;
 	margin-right: 20px;
 	font-weight: 600;
+	transition: all 0.5s ease;
 }
 
 .landing_login {
@@ -56,11 +85,54 @@
 	border-radius: 16px;
 	font-size: 16px;
 	font-weight: 600;
+	transition: all 0.5s ease;
 }
 
-.landing_register:hover, .landing_login:hover {
+.landing_register:hover,
+.landing_login:hover {
 	color: white;
 	background-color: transparent;
-	transition: all 0.5s ease;
 	transform: translateY(-5px);
+}
+
+@media screen and (max-width: 600px) {
+	.landing_hero {
+		top: calc(75vw + 50px);
+		left: unset;
+		margin: 0 20%;
+	}
+
+	.landing_background_verdant {
+		height: 150vw;
+	}
+
+	.landing_title {
+		top: max(15vw, 110px);
+	}
+
+	.landing_title h1 {
+		font-size: 28px;
+	}
+
+	.landing_title h2 {
+		max-width: 90vw;
+		font-size: 13px;
+		margin-bottom: 20px;
+	}
+
+	.landing_login, .landing_register {
+		padding: 8px 12px;
+		font-size: 13px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.landing_title {
+		top: 120px;
+	}
+
+	.landing_title h2 {
+		max-width: 60vw;
+		margin-bottom: 21vw;
+	}
 }
