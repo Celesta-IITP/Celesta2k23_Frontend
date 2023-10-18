@@ -6,6 +6,7 @@ import { Alert } from "antd";
 import { Link } from "react-router-dom";
 import  "./RegisterPage.css"
 import "../../font.css";
+import imageLink from "../../assets/img/RegisterImageMobile.png";
 
 // reactstrap components
 import {
@@ -56,10 +57,12 @@ class RegisterPage extends React.Component {
     msg: "",
     temp: "0",
     dropdownOpen: false,
+	mobileView: window.innerWidth < 768,
   };
   componentDidMount() {
     document.body.classList.toggle("register-page");
     document.documentElement.addEventListener("mousemove", this.followCursor);
+	window.addEventListener('resize', this.resize);
     console.log(this.props.isLoading);
     console.log(serverUrl);
   }
@@ -135,6 +138,12 @@ class RegisterPage extends React.Component {
         "deg)",
     });
   };
+
+  resize = () => {
+	this.setState({
+		mobileView: window.innerWidth < 768,
+	})
+  }
   handleCreate = async (
     name,
     email,
@@ -281,13 +290,15 @@ class RegisterPage extends React.Component {
                 </div>
             </div>
             <div className="row-2">
-                <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/99478938/275152281-153aa4ef-93ae-46b9-92e8-5639b16f463d.png" alt="" />
+                {!this.state.mobileView
+				? <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/99478938/275152281-153aa4ef-93ae-46b9-92e8-5639b16f463d.png" alt="" />
+				: <img src={imageLink} alt="" />}
             </div>
           </div>
         </section>
           </div>
-          <Footer/>
         </div>
+        <Footer marginTop={ "25px" } />
       </>
     );
   }

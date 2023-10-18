@@ -12523,7 +12523,7 @@ hr {
     position: relative; }
 
 .page-header {
-  min-height: 100vh;
+  min-height: 70vh;
   max-height: 999px;
   padding: 0;
   color: #ffffff;
