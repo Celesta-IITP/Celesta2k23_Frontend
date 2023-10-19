@@ -52,9 +52,9 @@ class ComponentsNavbar extends React.Component {
 							</li>
 
 							<li
-								onClick={() =>
+								onMouseOver={() =>
 									this.setState({
-										secondaryOpen: !this.state.secondaryOpen,
+										secondaryOpen: true,
 									})
 								}
 								onMouseLeave={() =>
@@ -62,6 +62,7 @@ class ComponentsNavbar extends React.Component {
 										secondaryOpen: false,
 									})
 								}>
+								{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 								<Link className="nav-menu-opener" style={this.state.secondaryOpen ? { textDecoration: "underline" } : {}}>
 									THE FEST
 								</Link>
@@ -82,6 +83,7 @@ class ComponentsNavbar extends React.Component {
 							</li>
 
 							<li className="nav-primary-separator">
+								{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 								<a>|</a>
 							</li>
 
@@ -177,6 +179,7 @@ class ComponentsNavbar extends React.Component {
 									})
 								}>
 								<div>
+									{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 									<a className="nav-menu-opener">THE FEST</a>
 									<img src={arrow} className="nav-mobile-opener" style={this.state.secondaryOpen ? { transform: "translate(-10px, -3px) rotate(0deg)" } : {}} alt="" />
 								</div>
@@ -221,6 +224,7 @@ class ComponentsNavbar extends React.Component {
 											})
 										}>
 										<div>
+											{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 											<a className="nav-menu-opener">
 												{this.state.userInfo.name.toUpperCase()}
 												<font className="grey-text">{"(" + this.state.userInfo.celestaID.toUpperCase() + ")"}</font>
