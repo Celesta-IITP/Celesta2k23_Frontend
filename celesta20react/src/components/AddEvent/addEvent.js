@@ -7,9 +7,7 @@ import {
   Form,
   Label,
   Input,
-  FormText,
   Col,
-  Row,
 } from "reactstrap";
 class addEvent extends Component {
   constructor(props) {
