@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 
 import EventItem from "./EventItem/index";
 import Navbar from "./Navbars/Navbar";
+import Footer from "./Footer/Footer";
 
 const Events = () => {
 	const [events, setEvents] = useState([
@@ -65,7 +66,7 @@ const Events = () => {
 
 					<div className={styles.content}>
 						{events.length === 0 && <div>Could not get data from server</div>}
-						{/* {events.length === 0 && (
+						{events.length === 0 && (
 							<EventItem
 								event={{
 									is_active: true,
@@ -88,13 +89,14 @@ const Events = () => {
 									id: "1234567890",
 								}}
 							/>
-						)} */}
+						)}
 						{events.map((event, index) => {
 							return <EventItem event={event} key={index} />;
 						})}
 					</div>
 				</div>
 			)}
+			<Footer />
 		</div>
 	);
 };

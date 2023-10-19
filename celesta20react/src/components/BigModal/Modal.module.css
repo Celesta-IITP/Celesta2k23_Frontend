@@ -47,6 +47,7 @@
 }
 
 .modal_head h1 {
+	color: black;
     font-size: 60px !important;
     margin: 0;
 }

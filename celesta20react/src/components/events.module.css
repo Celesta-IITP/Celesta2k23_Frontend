@@ -5,7 +5,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('/events/bg.png');
+    /* background-image: url('/events/bg.png'); */
+	background-color: #232323;
 	background-size: cover;
 	/* background-position-x: center; */
 	/* background-position-y: center; */
