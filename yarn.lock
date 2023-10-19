@@ -7,11 +7,6 @@
   "resolved" "https://registry.npmjs.org/@next/env/-/env-13.4.19.tgz"
   "version" "13.4.19"
 
-"@next/swc-win32-x64-msvc@13.4.19":
-  "integrity" "sha512-YzA78jBDXMYiINdPdJJwGgPNT3YqBNNGhsthsDoWHL9p24tEJn9ViQf/ZqTbwSpX/RrkPupLfuuTH2sf73JBAw=="
-  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.4.19.tgz"
-  "version" "13.4.19"
-
 "@popperjs/core@^2.11.8":
   "integrity" "sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A=="
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
@@ -34,7 +29,7 @@
   "resolved" "https://registry.npmjs.org/busboy/-/busboy-1.6.0.tgz"
   "version" "1.6.0"
   dependencies:
-    ""streamsearch"" "^1.1.0"
+    "streamsearch" "^1.1.0"
 
 "caniuse-lite@^1.0.30001406":
   "integrity" "sha512-vlPVrhsCS7XaSh2VvWluIQEzVhefrUQcEsQWSS5A5V+dM07uv1qHeQzAOTGIMy9i3e9bH15+muvI/UHojVgS/Q=="
@@ -125,9 +120,9 @@
     "scheduler" "^0.23.0"
 
 "react-toastify@^8.0.0":
-  "integrity" "sha512-7a5uhwbJ5Ivp5QyJN8P9M8g+7wksJt51QuYAZW0c3pDOh0Jx8lH7XzNHzzJg4NHup9n4zcqH9rwXknnyzYg2OA=="
-  "resolved" "https://registry.npmjs.org/react-toastify/-/react-toastify-8.0.0.tgz"
-  "version" "8.0.0"
+  "integrity" "sha512-Pg2Ju7NngAamarFvLwqrFomJ57u/Ay6i6zfLurt/qPynWkAkOthu6vxfqYpJCyNhHRhR4hu7+bySSeWWJu6PAg=="
+  "resolved" "https://registry.npmjs.org/react-toastify/-/react-toastify-8.2.0.tgz"
+  "version" "8.2.0"
   dependencies:
     "clsx" "^1.1.1"
 
