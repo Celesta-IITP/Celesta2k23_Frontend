@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
             .then((result) => {
                 if (
                     result.message ===
-                        'you are unauthenticated , Please Log in First' ||
+                        'You are unauthenticated, Please Log in First' ||
                     result.message ===
                         'Your token is expired please generate new one' ||
                     result.message ===
@@ -56,10 +56,10 @@ const AuthProvider = ({ children }) => {
                 ) {
                     setUser(null)
                     if ( false
-                        // ['/profile', '/event-registration'].includes(
+						// ['/profile', '/event-registration'].includes(
                         //     router.pathname
-                        // )
-                    ) {
+						// )
+					) {
                         toast.error(result.message, {
                             position: 'top-right',
                             autoClose: 3000,

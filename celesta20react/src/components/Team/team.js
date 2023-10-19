@@ -1,88 +1,95 @@
 import React from "react";
 import Navbar from "../Navbars/Navbar";
 import Footer from "../Footer/Footer.js";
-import  "./team.css";
+import "./team.css";
 import teamdata from "./teamdata";
 
 // import {MDBAvatar } from "mdbreact" ;
 
-const TeamPage = ( ) => {
-  
-  return (
-    <div className="aqua-gradient color-block-5 mb-3 mx-auto rounded-circle z-depth-1">
-    <Navbar />
-    <section className="speakers-section">
-        <div className="parallax-scene parallax-scene-2 anim-icons">
-            <span data-depth="0.40" className="parallax-layer icon icon-circle-5"></span>
-            <span data-depth="0.99" className="parallax-layer icon icon-circle-5"></span>
-        </div>
+const CommiteeCard = ({ x }) => {
+	return (
+		<>
+			<div className="sec-title light text-center">
+				<h2>{x.teamname}</h2>
+			</div>
 
-<div className="container">
-      <div className="sec-title light text-center">
-        <span className="title">Our Team</span>
-        </div>
+			<div className="row">
+				{x.members.map((y, i) => (
+					<div key={i} className="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+						<div className="inner-box">
+							<div className="image-box">
+								<figure className="image">
+									<img src={`${y.image}`} alt="" />
+									<div className="social-links">
+										<ul>
+											<li>
+												<a href={y.fb}>
+													<span className="fab fa-facebook-f"></span>
+												</a>
+											</li>
+											<li>
+												<a href={y.ln}>
+													<span className="fab fa-linkedin-in"></span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</figure>
+							</div>
+							<div className="caption-box">
+								<h4 className="name">
+									{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+									<a>{y.name}</a>
+								</h4>
+								<span className="designation">{y.position}</span>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+		</>
+	);
+};
 
-        <ul className="circles">
-                    <li></li> 
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
+const TeamPage = () => {
+	return (
+		<div className="aqua-gradient color-block-5 mb-3 mx-auto rounded-circle z-depth-1">
+			<Navbar />
+			<section className="speakers-section">
+				<div className="parallax-scene parallax-scene-2 anim-icons">
+					<span data-depth="0.40" className="parallax-layer icon icon-circle-5"></span>
+					<span data-depth="0.99" className="parallax-layer icon icon-circle-5"></span>
+				</div>
 
-{teamdata.map(( x , i) =>{ 
-      return(
-          <>
-                <div className="sec-title light text-center">
-                  <h2>{x.teamname}</h2>
-                </div>
+				<div className="container">
+					<div className="sec-title light text-center">
+						<span className="title">Our Team</span>
+					</div>
 
-                <div className="row">
-                
-                {x.members.map((y , i) => 
+					<ul className="circles">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
 
-                      <div className="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                          <div className="inner-box">
-                              <div className="image-box">
-                                  <figure className="image"><img src={`${y.image}`} alt=""/>
-                                      <div className="social-links">
-                                          <ul>
-                                            <li><a href="#"><span className="fab fa-facebook-f"></span></a></li> 
-                                            <li><a href="#"><span className="fab fa-linkedin-in"></span></a></li> 
-                                          </ul>
-                                      </div>
-                                  </figure>
-                              </div>
-                              <div className="caption-box">
-                                  <h4 className="name"><a href="#">{y.name}</a></h4>
-                                  <span className="designation">{y.position}</span>
-                              </div>
-                          </div>
-                      </div>
+					{teamdata.map((x, i) => {
+						console.log(x);
+						return <CommiteeCard x={x} key={i} />;
+					})}
 
-                  )}
-
-            
-
-               </div>
-    </>
-      )
-            })}  
-
-
-            {/* {x.image.map((y) => <img className="sp pa5" src={`${y}`} alt="sponsor" />)} */}
-
-
-</div>
-</section>
-      <Footer />
-      </div>
-  );
-}
+					{/* {x.image.map((y) => <img className="sp pa5" src={`${y}`} alt="sponsor" />)} */}
+				</div>
+			</section>
+			<Footer />
+		</div>
+	);
+};
 
 export default TeamPage;

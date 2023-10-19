@@ -2,12 +2,8 @@ import Axios from "axios";
 import {
   USER_LOADING,
   USER_LOADED,
-  LOGIN_SUCCESS,
-  LOGIN_FAIL,
   LOGOUT_SUCCESS,
-  REGISTER_SUCCESS,
   REGISTER_FAIL,
-  AUTH_ERROR,
 } from "../actions/types";
 import { returnErrors, clearErrors } from "./errorActions";
 //const serverUrl = " https://celesta-backend-iitp.herokuapp.com/api";
@@ -19,7 +15,7 @@ export const registerUser = (data) => async (dispatch) => {
       type: USER_LOADING,
     });
     console.log(data);
-    const res = await Axios.post(`${serverUrl}/users/signup`, data);
+    // const res = await Axios.post(`${serverUrl}/users/signup`, data);
     console.log("Signup successful");
     /*dispatch({
       type: USER_LOADED,

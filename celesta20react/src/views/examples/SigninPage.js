@@ -3,34 +3,14 @@ import "./RegisterPage.css";
 import classnames from "classnames";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { Alert } from "antd";
+// import { Alert } from "antd";
 import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
-	Button,
-	Card,
-	CardHeader,
-	CardBody,
 	CardFooter,
-	CardImg,
-	CardTitle,
-	Label,
-	FormGroup,
 	Form,
 	Input,
-	InputGroupAddon,
-	InputGroupText,
-	InputGroup,
-	Container,
-	Row,
-	Col,
-	Dropdown,
-	ButtonDropdown,
-	DropdownItem,
-	DropdownMenu,
-	DropdownToggle,
-	InputGroupButtonDropdown,
 } from "reactstrap";
 
 // core components
@@ -38,11 +18,11 @@ import { loginUser } from "redux/actions/authActions";
 // import { clearErrors } from "redux/actions/errorActions";
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
-import { USER_LOADING } from "redux/actions/types";
+// import { USER_LOADING } from "redux/actions/types";
 import { registerUser } from "redux/actions/authActions";
 import { clearErrors } from "redux/actions/errorActions";
-import ValidatedLoginForm from "./ValidateLogin";
-import { serverUrl } from "../../config";
+// import ValidatedLoginForm from "./ValidateLogin";
+// import { serverUrl } from "../../config";
 class SigninPage extends React.Component {
 	state = {
 		name: "",
@@ -114,7 +94,7 @@ class SigninPage extends React.Component {
 		this.handleCreate(x, y);
 	};
 	render() {
-		const { msg } = this.state;
+		// const { msg } = this.state;
 		return (
 			<>
 				{/* Temparary fix */}

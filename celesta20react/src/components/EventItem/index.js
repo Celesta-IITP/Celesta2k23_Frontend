@@ -1,4 +1,4 @@
-import Image from "../Image"
+// import Image from "../Image"
 import styles from './eventitem.module.css'
 // import { motion } from 'framer-motion'
 import Modal from '../BigModal/index'
@@ -67,10 +67,10 @@ const Index = ( {event} ) => {
                                     ? event.poster
                                     : '/events/poster.png'
                             }
-                            alt="Fest Image"
+                            alt="Fest Poster"
                             width={300}
                             style={{ borderRadius: 15, aspectRatio: "1" }}
-                            objectFit={'contain'}
+                            objectfit={'contain'}
                         
                         />
                     </div>

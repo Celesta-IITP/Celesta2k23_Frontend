@@ -2,46 +2,25 @@ import React from "react";
 import classnames from "classnames";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { Alert } from "antd";
-import { Link } from "react-router-dom";
+// import { Alert } from "antd";
+// import { Link } from "react-router-dom";
 import  "./RegisterPage.css"
 
 // reactstrap components
 import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  CardImg,
-  CardTitle,
-  Label,
-  FormGroup,
   Form,
   Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
-  Container,
-  Row,
-  Col,
-  Dropdown,
-  ButtonDropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  InputGroupButtonDropdown,
 } from "reactstrap";
 
 // core components
 import { loginUser, forgotPassword } from "redux/actions/authActions";
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
-import { USER_LOADING } from "redux/actions/types";
-import { registerUser } from "redux/actions/authActions";
+// import { USER_LOADING } from "redux/actions/types";
+// import { registerUser } from "redux/actions/authActions";
 import { clearErrors } from "redux/actions/errorActions";
-import ValidatedLoginForm from "./ValidateLogin";
-import { serverUrl } from "../../config";
+// import ValidatedLoginForm from "./ValidateLogin";
+// import { serverUrl } from "../../config";
 class ForgotPage extends React.Component {
     state = {
       squares1to6: "",
@@ -125,7 +104,7 @@ class ForgotPage extends React.Component {
       this.handleCreate(x);
     };
   render() {
-    const { msg } = this.state;
+    // const { msg } = this.state;
     return (
       <>
       {/* Temparary fix */}

@@ -1,16 +1,16 @@
 // simple react modal component
-import React, { useEffect, useState, useContext } from "react";
-import { AuthContext } from "../authContext";
+import React from "react";
+// import { AuthContext } from "../authContext";
 // import soloEventRegistration from "../Event Registration/soloEventRegistration"
 import styles from "./Modal.module.css";
 // import { useRouter } from "next/router"
-import Image from "../Image";
+// import Image from "../Image";
 // import { Link } from "react-router-dom";
 // import Routes from "../route"
 
 const Modal = (props) => {
 	// const router = useRouter()
-	const userData = useContext(AuthContext);
+	// const userData = useContext(AuthContext);
 
 	return (
 		<React.StrictMode>
@@ -36,7 +36,7 @@ const Modal = (props) => {
 							justifyContent: "center",
 						}}>
 						<div className={styles.image}>
-							<img src={props.body.poster ? props.body.poster : "/events/poster.png"} alt="Fest Image" width="300px" style={{ borderRadius: "15px", aspectRatio: "1" }} />
+							<img src={props.body.poster ? props.body.poster : "/events/poster.png"} alt="Fest Poster" width="300px" style={{ borderRadius: "15px", aspectRatio: "1" }} />
 						</div>
 						<div className={styles.modal_body}>
 							<div className={styles.date_venue}>
@@ -122,6 +122,7 @@ const Modal = (props) => {
 															  }
 													}
 													target="_blank"
+													rel="noopener noreferrer"
 													href={e[1] ? `tel:${e[1]}` : "#"}>
 													<span
 														style={{
@@ -156,6 +157,7 @@ const Modal = (props) => {
 						{props.body.video ? (
 							<a
 								target="_blank"
+								rel="noopener noreferrer"
 								className={styles.rulebtn}
 								href={props.body.video}
 								// onClick={(e) => props.closeHandler()}

@@ -1,4 +1,4 @@
-import React, { Component, Link } from "react";
+import React, { Component } from "react";
 import Tabletop from "tabletop";
 import Navbar from "../Navbars/Navbar";
 import "./ca.css";
@@ -63,7 +63,7 @@ class CA extends Component {
 	};
 
 	render() {
-		console.log("State: ", this.state);
+		// console.log("State: ", this.state);
 		return (
 			<div>
 				<Navbar />
@@ -97,19 +97,19 @@ class CA extends Component {
 						<div className="container">
 							<div className="row">
 								<div className="col-md-4 benefit-cards">
-									<img src={require("../../assets/img/skills.jpg")} className="img-resp" />
+									<img alt="Skill" src={require("../../assets/img/skills.jpg")} className="img-resp" />
 									<br />
 									<h4 className="display-5 ben-heading">Skill Improvement</h4>
 									<p className="about-tbl">It will help you to improve your managerial as well as communication skills.</p>
 								</div>
 								<div className="col-md-4 benefit-cards">
-									<img src={require("../../assets/img/networks.jpg")} className="img-resp" />
+									<img alt="Network" src={require("../../assets/img/networks.jpg")} className="img-resp" />
 									<br />
 									<h4 className="display-5 ben-heading">Networking</h4>
 									<p className="about-tbl">By communicating with many people it will increase your contacts which will help you in future.</p>
 								</div>
 								<div className="col-md-4 benefit-cards">
-									<img src={require("../../assets/img/recognition.jpg")} className="img-resp" />
+									<img alt="Recognition" src={require("../../assets/img/recognition.jpg")} className="img-resp" />
 									<br />
 									<h4 className="display-5 ben-heading">Recognition</h4>
 									<p className="about-tbl">You are getting to represent your college at a higher level.</p>

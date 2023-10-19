@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import Gallery from "react-photo-gallery";
+import React from "react";
+// import Gallery from "react-photo-gallery";
 import Navbar from "../Navbars/Navbar";
 import Footer from "../Footer/Footer.js";
-import { photos } from "./images";
+// import { photos } from "./images";
 import Images from "./Photos";
 import "./gallery.css";
 

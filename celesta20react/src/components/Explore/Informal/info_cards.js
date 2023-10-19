@@ -1,5 +1,5 @@
 import React from 'react';
-import events from '../../../assets/events.json';
+// import events from '../../../assets/events.json';
 import Extab from '../Extab/Extab'
 
 export const InfoCards = (props) => {

@@ -22,10 +22,10 @@ export default function HomePage() {
 		<div>
 			<Navbar />
 			<div className={styles.landing_background_verdant}>
-				<img className={styles.landing_background_odyssey} src={heroBgLayer} />
-				<img className={styles.landing_hero} src={heroImg} />
+				<img alt="" className={styles.landing_background_odyssey} src={heroBgLayer} />
+				<img alt="Hero" className={styles.landing_hero} src={heroImg} />
 				<div className={styles.landing_title}>
-					<h1>Celesta ‘23</h1>
+					<h1>Celesta ’23</h1>
 					<h2>The Techno-Management Fest of IIT Patna</h2>
 
 					<div>

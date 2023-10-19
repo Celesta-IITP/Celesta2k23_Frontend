@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "assets/css/nucleo-icons.css";
 import "assets/scss/blk-design-system-react.scss?v=1.1.0";
@@ -27,14 +27,14 @@ import ManagerialEvents from "./components/Explore/Managerial/man_explore";
 import RoboticsEvents from "./components/Explore/Robotics/robo_explore";
 import SuspEvents from "./components/Explore/SUSP/susp_explore";
 import TechnicalEvents from "./components/Explore/Technical/tech_explore";
-import CA from "components/CA/ca.js";
+import CA from "./components/CA/ca.js";
 import AddEvent from "./components/AddEvent/addEvent";
 import Points from "components/PtsTable/pts.js";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import Teams from "./components/Team/team";
-import RegisterPageN from "views/examples/RegisterPagen";
+// import RegisterPageN from "views/examples/RegisterPagen";
 
 class App extends React.Component {
 	render() {
@@ -43,7 +43,7 @@ class App extends React.Component {
 				<Switch>
 					<Route
 						path="/"
-						exact="true"
+						exact
 						// front page
 						// render={(props) => <Index {...props} />}
 						render={(props) => <HomePage {...props} />}
@@ -71,17 +71,13 @@ class App extends React.Component {
 					/>
 					<Route
 						path="/signin-page"
-						exact="true"
+						exact
 						render={(props) => <SigninPage {...props} />}
 					/>
 					<ProtectedRoute
 						path="/profile-page"
-						exact="true"
+						exact
 						component={ProfilePage}
-					/>
-					<Route
-						path="/Team"
-						render={(props) => <Teams {...props} />}
 					/>
 					<Route
 						path="/Team"
@@ -93,7 +89,7 @@ class App extends React.Component {
 					/>
 					<Route
 						path="/events/add"
-						exact="true"
+						exact
 						render={(props) => <AddEvent {...props} />}
 					/>
 					<Route

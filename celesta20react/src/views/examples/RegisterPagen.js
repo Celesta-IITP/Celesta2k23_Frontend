@@ -12,7 +12,7 @@ import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 
 import { serverUrl } from "../../config";
-import axios from "axios";
+// import axios from "axios";
 
 toast.configure();
 

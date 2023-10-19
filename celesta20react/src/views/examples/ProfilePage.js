@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "react-router";
 import classnames from "classnames";
 // javascript plugin used to create scrollbars on windows
-import PerfectScrollbar from "perfect-scrollbar";
+// import PerfectScrollbar from "perfect-scrollbar";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { uploadPhoto } from "../../redux/actions/authActions";
@@ -12,29 +12,23 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Label,
   FormGroup,
   Form,
   Input,
-  FormText,
   NavItem,
   NavLink,
   Nav,
-  Table,
-  TabContent,
-  TabPane,
   Container,
   Row,
   Col,
   UncontrolledTooltip,
-  UncontrolledCarousel,
 } from "reactstrap";
 
 // core components
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 
-const carouselItems = [
+/* const carouselItems = [
   {
     src: require("assets/img/denys.jpg"),
     altText: "Slide 1",
@@ -50,9 +44,9 @@ const carouselItems = [
     altText: "Slide 3",
     caption: "Stocks, United States",
   },
-];
+]; */
 
-let ps = null;
+// let ps = null;
 
 class ProfilePage extends React.Component {
   constructor(props) {
@@ -68,10 +62,10 @@ class ProfilePage extends React.Component {
     if (navigator.platform.indexOf("Win") > -1) {
       document.documentElement.className += " perfect-scrollbar-on";
       document.documentElement.classList.remove("perfect-scrollbar-off");
-      let tables = document.querySelectorAll(".table-responsive");
-      for (let i = 0; i < tables.length; i++) {
-        ps = new PerfectScrollbar(tables[i]);
-      }
+    //   let tables = document.querySelectorAll(".table-responsive");
+    //   for (let i = 0; i < tables.length; i++) {
+    //     ps = new PerfectScrollbar(tables[i]);
+    //   }
     }
     document.body.classList.toggle("profile-page");
   }
@@ -89,7 +83,7 @@ class ProfilePage extends React.Component {
     });
   };
   uploadImage(e) {
-    let imageObj = {};
+    // let imageObj = {};
     console.log(e.target.files[0]);
     this.setState({
       file: e.target.files[0],

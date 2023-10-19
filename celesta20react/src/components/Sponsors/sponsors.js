@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 // import abc2 from "../../assets/img/ryan.jpg";
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";

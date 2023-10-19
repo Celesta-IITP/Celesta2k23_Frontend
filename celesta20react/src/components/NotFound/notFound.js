@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { Component, Link } from "react";
+import React, { Component } from "react";
 import Navbar from "../Navbars/Navbar";
-import Footer from "../Footer/Footer.js";
+// import Footer from "../Footer/Footer.js";
 import "./notFound.css";
 
 class NotFound extends Component {
@@ -24,6 +24,7 @@ class NotFound extends Component {
               href="http://localhost:3000/"
               className="btn-go-home"
               target="_blank"
+			  rel="noopener noreferrer"
             >
               GO BACK HOME
             </a>

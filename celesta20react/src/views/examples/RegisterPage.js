@@ -1,47 +1,26 @@
 import React from "react";
-import classnames from "classnames";
+// import classnames from "classnames";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { Alert } from "antd";
-import { Link } from "react-router-dom";
+// import { Alert } from "antd";
+// import { Link } from "react-router-dom";
 import "./RegisterPage.css";
 import "../../font.css";
-import imageLink from "../../assets/img/RegisterImageMobile.png";
+// import imageLink from "../../assets/img/RegisterImageMobile.png";
 
 // reactstrap components
 import {
-	Button,
-	Card,
-	CardHeader,
-	CardBody,
-	CardFooter,
-	CardImg,
-	CardTitle,
-	Label,
-	FormGroup,
 	Form,
 	Input,
-	InputGroupAddon,
-	InputGroupText,
-	InputGroup,
-	Container,
-	Row,
-	Col,
-	Dropdown,
-	ButtonDropdown,
-	DropdownItem,
-	DropdownMenu,
-	DropdownToggle,
-	InputGroupButtonDropdown,
 } from "reactstrap";
 
 // core components
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
-import { USER_LOADING } from "redux/actions/types";
+// import { USER_LOADING } from "redux/actions/types";
 import { registerUser } from "redux/actions/authActions";
 import { clearErrors } from "redux/actions/errorActions";
-import ValidatedLoginForm from "./ValidateLogin";
+// import ValidatedLoginForm from "./ValidateLogin";
 import { serverUrl } from "../../config";
 class RegisterPage extends React.Component {
   state = {
@@ -184,8 +163,8 @@ class RegisterPage extends React.Component {
   submitHandler = (e) => {
     e.preventDefault();
     let result;
-    if (this.state.sex == "Male") result = 0;
-    else if (this.state.sex == "Female") result = 1;
+    if (this.state.sex === "Male") result = 0;
+    else if (this.state.sex === "Female") result = 1;
     else result = 2;
     console.log(result);
     const email = this.state.email;
@@ -200,14 +179,14 @@ class RegisterPage extends React.Component {
   };
   changeValue = (e) => {
     let result;
-    if (e.currentTarget.textContent == "Male") result = 0;
-    else if (e.currentTarget.textContent == "Female") result = 1;
+    if (e.currentTarget.textContent === "Male") result = 0;
+    else if (e.currentTarget.textContent === "Female") result = 1;
     else result = 2;
     console.log(result);
     this.setState({ sex: e.currentTarget.textContent });
   };
   render() {
-    const { msg } = this.state;
+    // const { msg } = this.state;
     return (
       <>
       {/* Temparary fix */}
@@ -248,7 +227,7 @@ class RegisterPage extends React.Component {
                     />
                     <Input
                       type="password"
-                      placeholder='Create Password'
+                      placeholder='Password'
                       onChange={(e)=>{
                         this.setState({password: e.target.value})
                       }}
@@ -269,7 +248,7 @@ class RegisterPage extends React.Component {
                     />
                     <Input
                       type="text"
-                      placeholder='Refferal ID'
+                      placeholder='Referral ID'
                       onChange={(e)=>{
                         this.setState({refId: e.target.value})
                       }}
@@ -280,7 +259,7 @@ class RegisterPage extends React.Component {
                   <h4 className="alrdyregis">Already Registered?</h4>
                 </div>
                 <div style={{textAlign:"center"}}>
-                <a href="/signin-page" style={{color:"black",textAlign:"center",textDecoration: 'underline black'}}>LogIN</a>
+                <a href="/signin-page" style={{color:"black",textAlign:"center",textDecoration: 'underline black'}}>Login</a>
                 </div>
             </div>
             <div className="row-2">
