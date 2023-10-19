@@ -99,9 +99,9 @@ const RegisterPageN = () => {
 									<button className="bttn">Register</button>
 								</Form>
 								<div>
-									<h4 className="alrdyregis">Already Registered?</h4>
+									<h4 className="alrdyregis" style={{ opacity: "70%" }}>Already Registered?</h4>
 								</div>
-								<div style={{ textAlign: "center", marginBottom: "20px" }}>
+								<div style={{ textAlign: "center", marginLeft: "20px", marginBottom: "20px" }}>
 									<a
 										href="/signin-page"
 										style={{
