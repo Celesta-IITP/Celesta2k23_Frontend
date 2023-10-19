@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Footer.css";
 import { Link } from "react-router-dom";
-export default function Footer() {
+export default function Footer({marginTop}) {
 	return (
 		<>
-			<div className="Footer">
+			<div className="Footer" style={{marginTop : (marginTop != null ? marginTop : "")}}>
 				<div className="container">
 					<div className="row">
 						<div className="col-md-6 col-lg-5 col-12 ft-1">
