@@ -5,13 +5,11 @@ import { compose } from "redux";
 import { connect } from "react-redux";
 // import { Alert } from "antd";
 import { Link } from "react-router-dom";
+import imageLinkMobile from "../../assets/img/RegisterImageMobile.webp";
+import imageLink from "../../assets/img/RegisterImage.webp";
 
 // reactstrap components
-import {
-	CardFooter,
-	Form,
-	Input,
-} from "reactstrap";
+import { CardFooter, Form, Input } from "reactstrap";
 
 // core components
 import { loginUser } from "redux/actions/authActions";
@@ -29,13 +27,12 @@ class SigninPage extends React.Component {
 		email: "",
 		password: "",
 		msg: null,
+		mobileView: window.innerWidth < 911,
 	};
 	componentDidMount() {
 		document.body.classList.toggle("register-page");
-		document.documentElement.addEventListener(
-			"mousemove",
-			this.followCursor
-		);
+		document.documentElement.addEventListener("mousemove", this.followCursor);
+		window.addEventListener("resize", this.resize);
 	}
 	componentDidUpdate(prevProps) {
 		//console.log(prevProps);
@@ -75,10 +72,8 @@ class SigninPage extends React.Component {
 
 	componentWillUnmount() {
 		document.body.classList.toggle("register-page");
-		document.documentElement.removeEventListener(
-			"mousemove",
-			this.followCursor
-		);
+		document.documentElement.removeEventListener("mousemove", this.followCursor);
+		window.removeEventListener("resize", this.resize);
 	}
 	handleCreate = (email, password) => {
 		const user = {
@@ -86,6 +81,11 @@ class SigninPage extends React.Component {
 			password,
 		};
 		loginUser(user);
+	};
+	resize = () => {
+		this.setState({
+			mobileView: window.innerWidth < 911,
+		});
 	};
 	submitHandler = (e) => {
 		e.preventDefault();
@@ -105,30 +105,22 @@ class SigninPage extends React.Component {
 				<Navbar />
 				<div className="wrapper">
 					<div className="page-header">
-						<div className="page-header-image" />
+						{/* <div className="page-header-image" /> */}
 						<section className="mid-section">
 							<div className="register">
-								<div className="row-1">
-									<div>
-										<div className="col d-flex justify-content-center">
-											<h2 className="Registersty">
-												<b>Sign in</b>
-											</h2>
-										</div>
+								<div className="row-1" style={{ minWidth: "50%", width: "100%" }}>
+									<div style={{ textAlign : 'center' }}>
+										<h4 className="Registersty">Sign in</h4>
 									</div>
 									<br></br>
 
 									{/* <div><h5 className="msgbox">This is a message box</h5></div> */}
-									<Form
-										id="form"
-										className="flex flex-col"
-										onSubmit={this.submitHandler}>
+									<Form id="form" className="flex flex-col" onSubmit={this.submitHandler}>
 										<Input
 											type="text"
 											placeholder="Email"
 											className={classnames({
-												"input-group-focus":
-													this.state.emailFocus,
+												"input-group-focus": this.state.emailFocus,
 											})}
 											onFocus={(e) =>
 												this.setState({
@@ -151,8 +143,7 @@ class SigninPage extends React.Component {
 											type="password"
 											placeholder="Password"
 											className={classnames({
-												"input-group-focus":
-													this.state.passwordFocus,
+												"input-group-focus": this.state.passwordFocus,
 											})}
 											onFocus={(e) =>
 												this.setState({
@@ -172,10 +163,7 @@ class SigninPage extends React.Component {
 										/>
 										<Link to="/forgot-page">
 											<div className="forbut">
-												<div className="btnfg">
-													{" "}
-													Forgot Password?
-												</div>
+												<div className="btnfg"> Forgot Password?</div>
 												<br></br>
 												<br></br>
 											</div>
@@ -196,7 +184,7 @@ class SigninPage extends React.Component {
 											Login
 										</button>
 									</Form>
-									<CardFooter>
+									<CardFooter style={{ backgroundColor: "transparent", border: "none" }}>
 										<div>
 											<h4
 												style={{
@@ -212,24 +200,22 @@ class SigninPage extends React.Component {
 												style={{
 													color: "black",
 													textAlign: "center",
-													textDecoration:
-														"underline black",
+													textDecoration: "underline black",
 												}}>
 												Register
 											</a>
 										</div>
 									</CardFooter>
 								</div>
-								<div className="row-2">
-									<img
-										src="https://github-production-user-asset-6210df.s3.amazonaws.com/99478938/275152281-153aa4ef-93ae-46b9-92e8-5639b16f463d.png"
-										alt=""
-									/>
+								<div className="row-2" style={{ minWidth: "50%", width: "100%" }}>
+									{!this.state.mobileView
+									? <img src={imageLink} alt="" />
+									: <img src={imageLinkMobile} alt="" />}
 								</div>
 							</div>
 						</section>
 					</div>
-					<Footer />
+					<Footer marginTop={"100px"} />
 				</div>
 			</>
 		);
@@ -241,6 +227,4 @@ const mapStateToProps = (state) => ({
 	error: state.error,
 });
 
-export default compose(connect(mapStateToProps, { registerUser, clearErrors }))(
-	SigninPage
-);
+export default compose(connect(mapStateToProps, { registerUser, clearErrors }))(SigninPage);

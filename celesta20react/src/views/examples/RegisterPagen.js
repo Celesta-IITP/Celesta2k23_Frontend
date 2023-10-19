@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./RegisterPage.css";
 import "../../font.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import imageLinkMobile from "../../assets/img/RegisterImageMobile.webp";
+import imageLink from "../../assets/img/RegisterImage.webp";
 
 // reactstrap components
 import { Form, Input } from "reactstrap";
@@ -27,6 +29,7 @@ const RegisterPageN = () => {
 		referralId: "CLST0000",
 	});
 	const [message, setMessage] = useState("");
+	const [mobileView, setMobile] = useState(window.innerWidth < 911);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -61,6 +64,14 @@ const RegisterPageN = () => {
 		});
 	};
 
+	const resize = () => {
+		setMobile(window.innerWidth < 911);
+	};
+
+	useEffect(() => {
+		window.addEventListener('resize', resize);
+	}, []);
+
 	return (
 		<>
 			{/* Temparary fix */}
@@ -71,62 +82,26 @@ const RegisterPageN = () => {
 			<Navbar />
 			<div className="wrapper">
 				<div className="page-header">
-					<div className="page-header-image" />
+					{/* <div className="page-header-image" /> */}
 					<section className="mid-section">
 						<div className="register">
-							<div className="row-1">
-								<div>
+							<div className="row-1" style={{ minWidth: "50%", width: "100%" }}>
+								<div style={{ textAlign : 'center' }}>
 									<h4 className="Registersty">Register</h4>
 								</div>
-								<Form
-									id="form"
-									className="flex flex-col"
-									onSubmit={handleSubmit}>
-									<Input
-										type="text"
-										placeholder="Full Name"
-										name="name"
-										className="fields"
-										onChange={handleChange}
-									/>
-									<Input
-										type="text"
-										placeholder="Email"
-										name="email"
-										onChange={handleChange}
-									/>
-									<Input
-										type="password"
-										name="password"
-										placeholder="Create Password"
-										onChange={handleChange}
-									/>
-									<Input
-										type="text"
-										name="college"
-										placeholder="College name"
-										onChange={handleChange}
-									/>
-									<Input
-										type="text"
-										name="phone"
-										placeholder="Mobile Number"
-										onChange={handleChange}
-									/>
-									<Input
-										type="text"
-										name="referralId"
-										placeholder="Refferal ID"
-										onChange={handleChange}
-									/>
+								<Form id="form" className="flex flex-col" onSubmit={handleSubmit}>
+									<Input type="text" placeholder="Full Name" name="name" className="fields" onChange={handleChange} />
+									<Input type="text" placeholder="Email" name="email" onChange={handleChange} />
+									<Input type="password" name="password" placeholder="Create Password" onChange={handleChange} />
+									<Input type="text" name="college" placeholder="College name" onChange={handleChange} />
+									<Input type="text" name="phone" placeholder="Mobile Number" onChange={handleChange} />
+									<Input type="text" name="referralId" placeholder="Refferal ID" onChange={handleChange} />
 									<button className="bttn">Register</button>
 								</Form>
 								<div>
-									<h4 className="alrdyregis">
-										Already Registered?
-									</h4>
+									<h4 className="alrdyregis">Already Registered?</h4>
 								</div>
-								<div style={{ textAlign: "center" }}>
+								<div style={{ textAlign: "center", marginBottom: "20px" }}>
 									<a
 										href="/signin-page"
 										style={{
@@ -138,16 +113,15 @@ const RegisterPageN = () => {
 									</a>
 								</div>
 							</div>
-							<div className="row-2">
-								<img
-									src="https://github-production-user-asset-6210df.s3.amazonaws.com/99478938/275152281-153aa4ef-93ae-46b9-92e8-5639b16f463d.png"
-									alt=""
-								/>
+							<div className="row-2" style={{ minWidth: "50%", width: "100%" }}>
+								{!mobileView
+								? <img src={imageLink} alt="" />
+								: <img src={imageLinkMobile} alt="" />}
 							</div>
 						</div>
 					</section>
 				</div>
-				<Footer />
+				<Footer marginTop={"100px"} />
 			</div>
 		</>
 	);

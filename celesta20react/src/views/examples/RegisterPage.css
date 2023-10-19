@@ -14,6 +14,7 @@ body.register-page{
   padding-left: 20px;
   opacity: 70%;
   font-weight: bold;
+  margin: 0;
   /* font-family: poppins; */
 }
 .login{
@@ -46,7 +47,7 @@ body.register-page{
     padding-left: 25px;
 }
 .register{
-  max-width: 978px;
+  max-width: 1800px;
   width: 100vw;
   display:flex;
   border: 1px solid #e9ecef;
@@ -161,7 +162,7 @@ body.register-page{
   width: 100%;
   /* display: none; */
 }
-@media screen and (min-width: 768px)  {
+@media screen and (min-width: 911px)  {
 	.register {
 		flex-direction: row;
 	}
@@ -169,7 +170,7 @@ body.register-page{
   .register .row-2 img{
 	border-radius: 0px 33px 33px 0px;
 	width: unset;
-  height: max(50vw, 655px);
+  height: max(50vw, 665px);
   display: initial;
     /* max-width: 200px; */
   }

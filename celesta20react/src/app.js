@@ -8,7 +8,7 @@ import "assets/demo/demo.css";
 // import Index from "pages/Index.js";
 import HomePage from "pages/HomePage";
 import LandingPage from "views/examples/LandingPage.js";
-import RegisterPage from "views/examples/RegisterPage.js";
+// import RegisterPage from "views/examples/RegisterPage.js";
 import ForgotPage from "views/examples/ForgotPassword.js";
 import ResetPage from "views/examples/ResetPassword.js";
 import ProfilePage from "views/examples/ProfilePage.js";
@@ -34,7 +34,7 @@ import Points from "components/PtsTable/pts.js";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import Teams from "./components/Team/team";
-// import RegisterPageN from "views/examples/RegisterPagen";
+import RegisterPageN from "views/examples/RegisterPagen";
 
 class App extends React.Component {
 	render() {
@@ -58,8 +58,8 @@ class App extends React.Component {
 					/>
 					<Route
 						path="/register-page"
-						render={(props) => <RegisterPage {...props} />}
-						// render={(props) => <RegisterPageN {...props} />}
+						// render={(props) => <RegisterPage {...props} />}
+						render={(props) => <RegisterPageN {...props} />}
 					/>
 					<Route
 						path="/forgot-page"
