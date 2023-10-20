@@ -6,6 +6,8 @@ import { connect } from "react-redux";
 // import { Link } from "react-router-dom";
 import  "./RegisterPage.css"
 import "../../font.css";
+import imageLinkMobile from "../../assets/img/RegisterImageMobile.webp";
+import imageLink from "../../assets/img/RegisterImage.webp";
 
 // reactstrap components
 import {
@@ -14,15 +16,15 @@ import {
 } from "reactstrap";
 
 // core components
-import { loginUser, resetPassword } from "redux/actions/authActions";
+import { loginUser, resetPassword } from "../../redux/actions/authActions";
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
-// import { USER_LOADING } from "redux/actions/types";
-// import { registerUser } from "redux/actions/authActions";
-// import { clearErrors } from "redux/actions/errorActions";
+// import { USER_LOADING } from "../../redux/actions/types";
+// import { registerUser } from "../../redux/actions/authActions";
+// import { clearErrors } from "../../redux/actions/errorActions";
 // import ValidatedLoginForm from "./ValidateLogin";
 // import { serverUrl } from "../../config";
-import { returnErrors } from "redux/actions/errorActions";
+import { returnErrors } from "../../redux/actions/errorActions";
 class ResetPage extends React.Component {
     state = {
       squares1to6: "",
@@ -32,10 +34,12 @@ class ResetPage extends React.Component {
       password: "",
       confirmPassword: "",
       msg: null,
+	  mobileView: window.innerWidth < 911,
     };
     componentDidMount() {
       document.body.classList.toggle("register-page");
       document.documentElement.addEventListener("mousemove", this.followCursor);
+	  window.addEventListener("resize", this.resize);
     }
     componentDidUpdate(prevProps) {
       //console.log(prevProps);
@@ -103,7 +107,7 @@ class ResetPage extends React.Component {
     };
     handleCreate = async (email, password, confirmPassword, code) => {
       if (!email || !password || !code || !confirmPassword) {
-        console.log("hello");
+        // console.log("hello");
         await this.props.returnErrors("empty details", "404", "RESET_FAIL");
       } else {
         const user = {
@@ -117,6 +121,11 @@ class ResetPage extends React.Component {
         if (this.props.error.message === "") this.props.history.push("/");
       }
     };
+	resize = () => {
+		this.setState({
+			mobileView: window.innerWidth < 911,
+		});
+	};
     submitHandler = (e) => {
       e.preventDefault();
       const x = this.state.email;
@@ -141,9 +150,9 @@ class ResetPage extends React.Component {
             <div className="page-header-image" />
             <section className="mid-section">
             <div className="register">
-            <div className="row-1">
+            <div className="row-1" style={{ minWidth: "50%", width: "100%" }}>
               <div>
-              <div className="col d-flex justify-content-center"><h4 className="Registersty">Reset</h4></div>
+              <div className="col d-flex justify-content-center"><h4 className="Registersty">Reset Password</h4></div>
               </div>
               <br></br><br></br>
               {/* <div><h5 className="msgbox">This is a message box</h5></div> */}
@@ -226,8 +235,10 @@ class ResetPage extends React.Component {
                 </Form>
                 
             </div>
-            <div className="row-2">
-                <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/99478938/275152281-153aa4ef-93ae-46b9-92e8-5639b16f463d.png" alt="" />
+            <div className="row-2" style={{ minWidth: "50%", width: "100%" }}>
+				{!this.state.mobileView
+				? <img src={imageLink} alt="" />
+				: <img src={imageLinkMobile} alt="" />}
             </div>
           </div>
         </section>

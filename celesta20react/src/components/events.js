@@ -39,7 +39,7 @@ const Events = () => {
 
 		async function callAPI() {
 			try {
-				const res = await fetch(`${host}/api/events/detailed`, {
+				const res = await fetch(`${host}/events/detailed`, {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json",

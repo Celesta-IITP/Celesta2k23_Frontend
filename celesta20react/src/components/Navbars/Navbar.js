@@ -21,11 +21,18 @@ class ComponentsNavbar extends React.Component {
 			userInfo: this.props.user ? this.props.user : {},
 		};
 	}
+	refreshFunction = async () => {
+	  await this.props.refreshPage(JSON.parse(localStorage.getItem("user")));
+	};
 	logoutHandler = (e) => {
 		this.props.logoutUser();
-		/*this.props.history.push("/");*/
+		this.props.history.push("/");
 	};
 	componentDidMount() {
+		const token = localStorage.getItem("token");
+		if (token) {
+		  this.refreshFunction();
+		}
 		document.getElementsByClassName("cd-header").item(0).classList.remove("menu-is-open");
 		document.getElementsByClassName("menu-icon").item(0).classList.remove("open");
 		document.getElementsByClassName("cd-primary-nav").item(0).classList.remove("is-visible");
@@ -101,7 +108,7 @@ class ComponentsNavbar extends React.Component {
 									</>
 								) : (
 									<li
-										style={{ width: "175px" }}
+										style={{ minWidth: "175px", width: "fit-content" }}
 										onClick={() =>
 											this.setState({
 												profileOpen: !this.state.profileOpen,
@@ -112,9 +119,9 @@ class ComponentsNavbar extends React.Component {
 												profileOpen: false,
 											})
 										}>
-										<Link className="nav-menu-opener">
-											{this.state.userInfo.name.toUpperCase()}
-											<font className="grey-text">{"(" + this.state.userInfo.celestaID.toUpperCase() + ")"}</font>
+										<Link className="nav-menu-opener nav-profile-button">
+											{this.state.userInfo.name.split(' ')[0].toUpperCase()}
+											<font className="grey-text">{"(" + this.state.userInfo.celestaId.toUpperCase() + ")"}</font>
 										</Link>
 
 										{this.state.profileOpen && (
@@ -226,8 +233,8 @@ class ComponentsNavbar extends React.Component {
 										<div>
 											{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 											<a className="nav-menu-opener">
-												{this.state.userInfo.name.toUpperCase()}
-												<font className="grey-text">{"(" + this.state.userInfo.celestaID.toUpperCase() + ")"}</font>
+												{this.state.userInfo.name.split(' ')[0].toUpperCase()}
+												<font className="grey-text">{"(" + this.state.userInfo.celestaId.toUpperCase() + ")"}</font>
 											</a>
 										</div>
 

@@ -11,7 +11,7 @@ const { Provider } = AuthContext
 
 const PrivateRoute = ({ children }) => {
     // const router = useRouter()
-    const authContext = React.useContext(AuthContext)
+    // const authContext = React.useContext(AuthContext)
 
     // useEffect(() => {
     //     if (
@@ -38,8 +38,8 @@ const PrivateRoute = ({ children }) => {
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     // const router = useRouter()
-    function getUser() {
-        fetch(`${host}/user/editprofile`, {
+    function getUser({ user }) {
+        fetch(`${host}/users/${user.celestaId}`, {
             method: 'GET',
             credentials: 'include',
             redirect: 'follow',
@@ -79,8 +79,8 @@ const AuthProvider = ({ children }) => {
             .catch((error) => console.log('error', error))
     }
     useEffect(() => {
-        getUser()
-    }, [])
+        getUser({ user })
+    }, [ user ])
     return (
         <>
             <ToastContainer

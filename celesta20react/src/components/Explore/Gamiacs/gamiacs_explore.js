@@ -5,6 +5,7 @@ import "./gamiacs_explore_main.css";
 import { BackToEvents } from "../../_BackToEvents/BackToEvents";
 import { GamiacCards } from "./gamiacs_cards";
 import axios from "axios";
+import { serverUrl } from "config";
 
 class gamiacs_explore extends Component {
   state = {
@@ -23,7 +24,7 @@ class gamiacs_explore extends Component {
     const token = localStorage.getItem("token");
     console.log(token);
     axios
-      .get("http://localhost:4500/api/events/bytype/gamiacs/detailed/", {
+      .get(`${serverUrl}/events/bytype/gamiacs/detailed/`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: token,

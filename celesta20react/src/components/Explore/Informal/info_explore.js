@@ -5,6 +5,7 @@ import "./info_explore_main.css";
 import { BackToEvents } from "../../_BackToEvents/BackToEvents";
 import { InfoCards } from "./info_cards";
 import axios from "axios";
+import { serverUrl } from "config";
 
 class info_explore extends Component {
   state = {
@@ -23,7 +24,7 @@ class info_explore extends Component {
     const token = localStorage.getItem("token");
     console.log(token);
     axios
-      .get("http://localhost:4500/api/events/bytype/onsite/detailed/", {
+      .get(`${serverUrl}/events/bytype/onsite/detailed/`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: token,

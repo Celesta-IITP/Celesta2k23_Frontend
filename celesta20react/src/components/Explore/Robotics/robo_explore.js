@@ -5,6 +5,7 @@ import './robo_explore_main.css'
 import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 import {RoboticsCards} from './robo_cards'
 import axios from 'axios';
+import { serverUrl } from 'config';
 
 class robo_explore extends Component {
 	state={
@@ -21,7 +22,7 @@ class robo_explore extends Component {
 
 	getEvents = () => {
 		const token = localStorage.getItem("token");
-		axios.get('http://localhost:4500/api/events/bytype/robotics/detailed/',{
+		axios.get(`${serverUrl}/events/bytype/robotics/detailed/`,{
 			headers: {
 			  "Content-Type": "application/json",
 			  Authorization: token,

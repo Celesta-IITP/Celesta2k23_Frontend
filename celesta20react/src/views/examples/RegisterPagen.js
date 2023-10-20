@@ -34,7 +34,7 @@ const RegisterPageN = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await fetch(`${serverUrl}/api/users/signup`, {
+			const response = await fetch(`${serverUrl}/users/signup`, {
 				// credentials: "include",
 				method: "POST",
 				referrerPolicy: "no-referrer",
@@ -74,13 +74,13 @@ const RegisterPageN = () => {
 
 	return (
 		<>
-			{/* Temparary fix */}
-			<div
-				style={{
-					height: "90px",
-				}}></div>
 			<Navbar />
-			<div className="wrapper">
+			<div className="wrapper" style={{ backgroundColor: "white" }}>
+				{/* Temparary fix */}
+				<div
+					style={{
+						height: "90px",
+					}}></div>
 				<div className="page-header">
 					{/* <div className="page-header-image" /> */}
 					<section className="mid-section">

@@ -54,6 +54,10 @@
 	margin: 26px 0;
 }
 
+.nav-profile-button {
+	width: fit-content;
+}
+
 .nav-desktop-secondary {
 	display: flex;
 	flex-direction: column;

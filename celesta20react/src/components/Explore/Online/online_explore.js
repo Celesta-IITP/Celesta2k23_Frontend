@@ -5,6 +5,7 @@ import './online_explore_main.css';
 import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 import {OnlineCards} from './online_cards'
 import axios from 'axios';
+import { serverUrl } from 'config';
 
 class online_explore extends Component {
 	state={
@@ -21,7 +22,7 @@ class online_explore extends Component {
 
 	getEvents = () => {
 		const token = localStorage.getItem("token");
-		axios.get('http://localhost:4500/api/events/bytype/online/detailed/',{
+		axios.get(`${serverUrl}/events/bytype/online/detailed/`,{
 			headers: {
 			  "Content-Type": "application/json",
 			  Authorization: token,

@@ -3,7 +3,7 @@ import thunk from "redux-thunk";
 
 import rootReducer from "./redux/reducers/rootReducer";
 const middleware = [thunk];
-const USER = JSON.parse(localStorage.getItem("user"));
+const USER = JSON.parse(localStorage.getItem("user") !== "undefined" ? localStorage.getItem("user") : "{}");
 const initialState = {
   auth: {
     user: USER,

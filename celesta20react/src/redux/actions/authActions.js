@@ -7,7 +7,7 @@ import {
 } from "../actions/types";
 import { returnErrors, clearErrors } from "./errorActions";
 //const serverUrl = " https://celesta-backend-iitp.herokuapp.com/api";
-const serverUrl = " http://localhost:4500/api";
+import { serverUrl } from "../../config";
 export const registerUser = (data) => async (dispatch) => {
   try {
     console.log("In auth actions");
@@ -41,12 +41,12 @@ export const loginUser = (user) => async (dispatch) => {
       type: USER_LOADING,
     });
     const res = await Axios.post(`${serverUrl}/users/signin`, user);
-    console.log(res.data.data.user);
+    // console.log(res.data.data.user);
     const token = res.data.data.token;
     localStorage.setItem("token", token);
     localStorage.setItem("user", JSON.stringify(res.data.data.user));
-    const x = JSON.parse(localStorage.getItem("user"));
-    console.log(x);
+	// const x = JSON.parse(localStorage.getItem("user"));
+    // console.log(x);
     dispatch({
       type: USER_LOADED,
       payload: { user: res.data.data.user, status: res.status },
@@ -126,7 +126,7 @@ export const resetPassword = (user) => async (dispatch) => {
 };
 export const refreshPage = (user) => async (dispatch) => {
   try {
-    console.log(user);
+    // console.log(user);
     dispatch({
       type: USER_LOADED,
       payload: { user: user },

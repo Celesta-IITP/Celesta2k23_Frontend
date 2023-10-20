@@ -12,13 +12,12 @@ import imageLink from "../../assets/img/RegisterImage.webp";
 import { CardFooter, Form, Input } from "reactstrap";
 
 // core components
-import { loginUser } from "redux/actions/authActions";
-// import { clearErrors } from "redux/actions/errorActions";
+import { loginUser } from "../../redux/actions/authActions";
+// import { refreshPage } from "../../redux/actions/authActions";
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
-// import { USER_LOADING } from "redux/actions/types";
-import { registerUser } from "redux/actions/authActions";
-import { clearErrors } from "redux/actions/errorActions";
+// import { USER_LOADING } from "../../redux/actions/types";
+import { clearErrors } from "../../redux/actions/errorActions";
 // import ValidatedLoginForm from "./ValidateLogin";
 // import { serverUrl } from "../../config";
 class SigninPage extends React.Component {
@@ -80,7 +79,7 @@ class SigninPage extends React.Component {
 			email,
 			password,
 		};
-		loginUser(user);
+		this.props.loginUser(user);
 	};
 	resize = () => {
 		this.setState({
@@ -109,7 +108,7 @@ class SigninPage extends React.Component {
 						<section className="mid-section">
 							<div className="register">
 								<div className="row-1" style={{ minWidth: "50%", width: "100%" }}>
-									<div style={{ textAlign : 'center' }}>
+									<div style={{ textAlign: "center" }}>
 										<h4 className="Registersty">Sign in</h4>
 									</div>
 									<br></br>
@@ -136,7 +135,7 @@ class SigninPage extends React.Component {
 												this.setState({
 													email: e.target.value,
 												});
-												console.log(this.state.email);
+												// console.log(e.target.value);
 											}}
 										/>
 										<Input
@@ -177,10 +176,7 @@ class SigninPage extends React.Component {
                           {" "}
                           Login
                         </Button> */}
-										<button
-											className="bttn"
-											// onClick={this.submitHandler}
-										>
+										<button className="bttn" onClick={this.submitHandler}>
 											Login
 										</button>
 									</Form>
@@ -227,4 +223,4 @@ const mapStateToProps = (state) => ({
 	error: state.error,
 });
 
-export default compose(connect(mapStateToProps, { registerUser, clearErrors }))(SigninPage);
+export default compose(connect(mapStateToProps, { loginUser, clearErrors }))(SigninPage);

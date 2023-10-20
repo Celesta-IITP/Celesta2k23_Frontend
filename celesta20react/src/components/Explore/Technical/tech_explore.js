@@ -5,6 +5,7 @@ import './tech_explore_main.css'
 import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 import {TechnicalCards} from './technical_cards'
 import axios from 'axios';
+import { serverUrl } from 'config';
 
 class tech_explore extends Component {
 	state={
@@ -21,7 +22,7 @@ class tech_explore extends Component {
 
 	getEvents = () => {
 		const token = localStorage.getItem("token");
-		axios.get('http://localhost:4500/api/events/bytype/technical/detailed/',{
+		axios.get(`${serverUrl}/events/bytype/technical/detailed/`,{
 			headers: {
 			  "Content-Type": "application/json",
 			  Authorization: token,

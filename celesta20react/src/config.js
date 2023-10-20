@@ -1,3 +1,3 @@
 module.exports = {
-	serverUrl: "http://localhost:4500",
+	serverUrl: "http://167.71.233.186/api",
 };

@@ -3,6 +3,7 @@ import Tabletop from "tabletop";
 import Navbar from "../Navbars/Navbar";
 import "./ca.css";
 import axios from "axios";
+import { serverUrl } from "config";
 
 class CA extends Component {
 	// const [data, setData] = useState([]);
@@ -34,7 +35,7 @@ class CA extends Component {
 		event.preventDefault();
 
 		axios
-			.post("http://localhost:4500/api/ca/register/", {
+			.post(`${serverUrl}/ca/register/`, {
 				email: this.state.mail,
 				name: this.state.name,
 				phone: this.state.mobnum,

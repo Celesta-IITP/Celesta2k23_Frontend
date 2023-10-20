@@ -1,6 +1,6 @@
 // simple react modal component
-import React from "react";
-// import { AuthContext } from "../authContext";
+import React, { useContext } from "react";
+import { AuthContext } from "../authContext";
 // import soloEventRegistration from "../Event Registration/soloEventRegistration"
 import styles from "./Modal.module.css";
 // import { useRouter } from "next/router"
@@ -10,7 +10,8 @@ import styles from "./Modal.module.css";
 
 const Modal = (props) => {
 	// const router = useRouter()
-	// const userData = useContext(AuthContext);
+	const userData = useContext(AuthContext);
+	// console.log(userData);
 
 	return (
 		<React.StrictMode>

@@ -5,6 +5,7 @@ import './susp_explore_main.css'
 import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 import {SuspCards} from './susp_cards'
 import axios from 'axios';
+import { serverUrl } from 'config';
 
 class susp_explore extends Component {
 	state={
@@ -21,7 +22,7 @@ class susp_explore extends Component {
 
 	getEvents = () => {
 		const token = localStorage.getItem("token");
-		axios.get('http://localhost:4500/api/events/bytype/school/detailed/',{
+		axios.get(`${serverUrl}/events/bytype/school/detailed/`,{
 			headers: {
 			  "Content-Type": "application/json",
 			  Authorization: token,

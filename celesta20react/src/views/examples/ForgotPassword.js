@@ -12,12 +12,12 @@ import imageLink from "../../assets/img/RegisterImage.webp";
 import { Form, Input, CardFooter } from "reactstrap";
 
 // core components
-import { loginUser, forgotPassword } from "redux/actions/authActions";
+import { forgotPassword } from "../../redux/actions/authActions";
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 // import { USER_LOADING } from "redux/actions/types";
 // import { registerUser } from "redux/actions/authActions";
-import { clearErrors } from "redux/actions/errorActions";
+import { clearErrors } from "../../redux/actions/errorActions";
 // import ValidatedLoginForm from "./ValidateLogin";
 // import { serverUrl } from "../../config";
 class ForgotPage extends React.Component {
@@ -82,8 +82,8 @@ class ForgotPage extends React.Component {
 			squares7and8: "perspective(500px) rotateY(" + posX * 0.02 + "deg) rotateX(" + posY * -0.02 + "deg)",
 		});
 	};
-	handleCreate = async (email) => {
-		await forgotPassword(email);
+	handleCreate = (email) => {
+		this.props.forgotPassword(email);
 		console.log(this.props.error.message);
 		if (this.props.error.message === "") this.props.history.push("/reset-page");
 	};
@@ -101,13 +101,13 @@ class ForgotPage extends React.Component {
 		// const { msg } = this.state;
 		return (
 			<>
-				{/* Temparary fix */}
-				<div
-					style={{
-						height: "90px",
-					}}></div>
 				<Navbar />
 				<div className="wrapper">
+					{/* Temparary fix */}
+					<div
+						style={{
+							height: "90px",
+						}}></div>
 					<div className="page-header">
 						{/* <div className="page-header-image" /> */}
 						<section className="mid-section">
@@ -120,7 +120,8 @@ class ForgotPage extends React.Component {
 									{/* <div><h5 className="msgbox">This is a message box</h5></div> */}
 									<Form id="form" className="flex flex-col" onSubmit={this.submitHandler}>
 										<Input
-											type="text"
+											type="email"
+											required
 											placeholder="Email"
 											className={classnames({
 												"input-group-focus": this.state.emailFocus,
@@ -165,4 +166,4 @@ const mapStateToProps = (state) => ({
 	error: state.error,
 });
 
-export default compose(connect(mapStateToProps, { loginUser, clearErrors, forgotPassword }))(ForgotPage);
+export default compose(connect(mapStateToProps, { clearErrors, forgotPassword }))(ForgotPage);

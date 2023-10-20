@@ -5,6 +5,7 @@ import './man_explore_main.css'
 import {BackToEvents} from '../../_BackToEvents/BackToEvents'
 import {ManCards} from './man_cards'
 import axios from 'axios';
+import { serverUrl } from 'config';
 
 class man_explore extends Component {
 	state={
@@ -21,7 +22,7 @@ class man_explore extends Component {
 
 	getEvents = () => {
 		const token = localStorage.getItem("token");
-		axios.get('http://localhost:4500/api/events/bytype/managerial/detailed/',{
+		axios.get(`${serverUrl}/events/bytype/managerial/detailed/`,{
 			headers: {
 			  "Content-Type": "application/json",
 			  Authorization: token,
