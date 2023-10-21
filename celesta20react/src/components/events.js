@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 import EventItem from "./EventItem/index";
 import Navbar from "./Navbars/Navbar";
 import Footer from "./Footer/Footer";
+import { serverUrl } from "config";
 
 const Events = () => {
 	const [events, setEvents] = useState([
@@ -35,7 +36,7 @@ const Events = () => {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		let host = process.env.REACT_APP_PUBLIC_HOST;
+		let host = serverUrl;
 
 		async function callAPI() {
 			try {

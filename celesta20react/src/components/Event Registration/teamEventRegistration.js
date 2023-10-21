@@ -1,8 +1,9 @@
+import { serverUrl } from 'config'
 import React from 'react'
 // import { useRouter } from 'next/router'
-const host = process.env.REACT_APP_PUBLIC_HOST
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+const host = serverUrl
 
 async function teamEventRegistration(eventID, teamName, teamMembers, router) {
     var myHeaders = new Headers()

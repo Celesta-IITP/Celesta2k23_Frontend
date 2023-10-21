@@ -1,8 +1,9 @@
 import React from 'react'
 // import { useRouter } from 'next/router'
-// const host = process.env.REACT_APP_PUBLIC_HOST
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer, toast } from 'react-toastify'
+// import { serverUrl } from 'config'
+// const host = serverUrl;
 
 const host="http://127.0.0.1:8000"
 async function soloEventRegistration(eventID, router, closeHandler) {
