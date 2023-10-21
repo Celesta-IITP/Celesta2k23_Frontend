@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 101;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 950px) {
+    .modal {
+        justify-content: flex-end;
+    }
+}
+
+.modalContent {
+    max-width: 950px;
+    max-height: 85vh;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+	margin-top: 80px;
+}
+
+.modal_head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    padding-block: 35px;
+}
+
+.modal_head h1 {
+	color: black;
+    font-size: 40px !important;
+    margin: 0;
+}
+.modal_head svg {
+	position: relative;
+	bottom: calc(100% - 35px);
+}
+
+@media screen and (max-width: 950px) {
+    .modalContent {
+        padding: 0;
+        border-radius: 15px;
+        /* border-top-right-radius: 15px;
+        border-top-left-radius: 15px; */
+        margin-inline: 10px;
+        padding-inline: 25px;
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .modal_head h1 {
+        font-size: 25px !important;
+    }
+}
+
+.modal_body {
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    border-radius: 0 0 5px 5px;
+    max-width: 600px;
+    /* max-height: 60vh; */
+}

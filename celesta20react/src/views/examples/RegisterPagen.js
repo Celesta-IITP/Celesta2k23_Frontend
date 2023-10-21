@@ -48,6 +48,7 @@ const RegisterPageN = () => {
 			console.log(message);
 			if (response.status === 200) {
 				toast.success(message);
+				this.props.history.push("/");
 			} else {
 				toast.error(message);
 			}

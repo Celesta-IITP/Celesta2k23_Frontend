@@ -1,5 +1,6 @@
 // import Image from "../Image"
 import styles from './eventitem.module.css'
+import defaultPoster from "../../assets/img/RegisterImage.webp";
 // import { motion } from 'framer-motion'
 import Modal from '../BigModal/index'
 import React,{ useState } from 'react'
@@ -46,26 +47,13 @@ const Index = ( {event} ) => {
                 }}
                 onClick={() => setModal(true)}
             >
-                {event.is_active ? null : (
-                    <img
-                        src="/assets/coming-soon.png"
-                        style={{
-                            position: 'absolute',
-                            top: '8px',
-                            right: '30px',
-                            zIndex: 2,
-                            height: '100px',
-                        }}
-                        alt="Coming Soon"
-                    />
-                )}
                 <div className={styles.imageWrap}>
                     <div className={styles.item}>
                         <img
                             src={
-                                event.poster
-                                    ? event.poster
-                                    : '/events/poster.png'
+                                event.imageUrl
+                                    ? event.imageUrl
+                                    : defaultPoster
                             }
                             alt="Fest Poster"
                             width={300}

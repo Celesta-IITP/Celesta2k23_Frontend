@@ -79,7 +79,7 @@ class SigninPage extends React.Component {
 			email,
 			password,
 		};
-		this.props.loginUser(user);
+		this.props.loginUser(user).then(() => this.props.history.push("/"));
 	};
 	resize = () => {
 		this.setState({
