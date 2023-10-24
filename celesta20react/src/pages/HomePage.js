@@ -10,7 +10,10 @@ import styles from "./HomePage.module.css";
 import heroImg from "../assets/img/LandingPageHero.webp";
 import heroBg from "../assets/img/LandingPageHeroBgLayer.webp";
 import heroBgAlt from "../assets/img/LandingPageHeroBgLayerAlt.webp";
-
+import cloud1 from "../assets/img/cloud1.png";
+import cloud2 from "../assets/img/cloud2.png";
+import cloud5 from "../assets/img/cloud3.png";
+import cloud4 from "../assets/img/cloud4.png";
 class HomePage extends React.Component {
 	constructor(props) {
 		super(props);
@@ -32,11 +35,15 @@ class HomePage extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="bg">
 				<Navbar />
 				<div className={styles.landing_background_verdant}>
-					<img alt="" className={styles.landing_background_odyssey} src={this.state.heroBgLayer} />
+					{/* <img alt="" className={styles.landing_background_odyssey} src={this.state.heroBgLayer} /> */}
 					<img alt="Hero" className={styles.landing_hero} src={heroImg} />
+					<img alt="Hero" className={styles.cloud1} src={cloud1} />
+					<img alt="Hero" className={styles.cloud2} src={cloud2} />
+					<img alt="Hero" className={styles.cloud3} src={cloud5} />
+					<img alt="Hero" className={styles.cloud4} src={cloud4} />
 					<div className={styles.landing_title}>
 						<h1>Celesta ’23</h1>
 						<h2>The Techno-Management Fest of IIT Patna</h2>
@@ -57,8 +64,13 @@ class HomePage extends React.Component {
 								</>
 							)}
 						</div>
+
+
 					</div>
 				</div>
+
+
+
 				<Footer marginTop={0} />
 			</div>
 		);
