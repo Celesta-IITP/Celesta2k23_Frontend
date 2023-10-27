@@ -56,15 +56,11 @@ const TeamPage = () => {
 		<div className="aqua-gradient color-block-5 mb-3 mx-auto rounded-circle z-depth-1">
 			<Navbar />
 			<section className="speakers-section">
-				<div className="parallax-scene parallax-scene-2 anim-icons">
-					<span data-depth="0.40" className="parallax-layer icon icon-circle-5"></span>
-					<span data-depth="0.99" className="parallax-layer icon icon-circle-5"></span>
-				</div>
 
 				<div className="container">
-					<div className="sec-title light text-center">
-						<span className="title">Our Team</span>
-					</div>
+				<div className="headBG">
+        			<h1 className="head">Our Team</h1>
+      			</div>
 
 					<ul className="circles">
 						<li></li>
