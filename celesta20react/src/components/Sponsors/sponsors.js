@@ -18,7 +18,7 @@ import impl1 from "../../assets/Partners/SybyllineRobotics.png";
 import socl1 from "../../assets/Partners/GardaPatna.png";
 import socl2 from "../../assets/Partners/ItHappensinBihar.png";
 import socl3 from "../../assets/Partners/Patnaites.png";
-import socl4 from "../../assets/Partners/StoriesOfBihar.png";
+import socl4 from "../../assets/Partners/StoriesOfBihar.jpg";
 import media1 from "../../assets/Partners/PatnaBeats.png";
 import robo1 from "../../assets/Partners/RoboticsIndia.png";
 import ent1 from "../../assets/Partners/Radiomirchi_logo.png";
@@ -42,6 +42,7 @@ const Sponsors = ( ) =>  {
    <div className="spbg">
       {/* <div className="sp-main"> */}
         <Navbar />
+      
         <br></br> <br></br> <br></br> <br></br> <br></br>
         <h1 className="sp-head">Sponsors</h1>
         <br></br> <br></br>

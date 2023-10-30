@@ -5,35 +5,43 @@ import Footer from "../Footer/Footer.js";
 // import { photos } from "./images";
 import Images from "./Photos";
 import "./gallery.css";
-
+import def from "../../assets/Partners/4041.png";
+import layer from "../../assets/img/LandingPageHeroBgLayer.webp"
 /* popout the browser and maximize to see more rows! -> */
 const Photos = () => {
   //const [x,setX]=useState(0);
   return (
-    <div style={{ backgroundColor: "#05001e" }}>
-      <div>
+<div className="bdy">
         <Navbar />
-      </div>
+<div className="hding">
+<h1>Some Previous Year Memories</h1>
+</div>
 
-      <div style={{ backgroundColor: "#05001e" }}>
-        <div style={{ padding: "10px" }}>
-          <h1
-            className="galleryheading"
-            style={{
-              textAlign: "center",
-              fontSize: "50px",
-              color: "purple",
-              marginTop: "50px",
-              marginBottom: "50px",
-            }}
-          >
-            Some stunning Memories!
-          </h1>
-          <div className="zoom">
-            <Images />
-          </div>
+
+<section className="des5">
+
+    <div className="container2">
+
+        <div className="circle">
+            <div className="crd1"><img src="images/IMG_20190515_212344.jpg"/></div>
+            <div className="crd2"><img src="images/554063_City HelloRF.jpg"/></div>
+            <div className="crd3"><img src="images/544720_Carpathian Mountains HelloRF.jpg"/></div>
+            <div className="crd4"><img src="images/1557114614610.jpg"/></div>
+            <div className="crd5"><img src="images/1594993301777.jpg"/></div>
+            <div className="crd6"><img src="images/589149_Lakeside.jpg"/></div>
+          
+        
         </div>
-      </div>
+        
+        </div>
+
+</section>
+
+
+
+
+
+
       <Footer />
     </div>
   );

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url("../../assets/img/LandingPageHeroBg.webp");
+  /* background-image: url("../../assets/img/LandingPageHeroBg.webp"); */
 	background-size: contain;
 	background-position: 0 40px;
   background-attachment: fixed;
@@ -25,6 +25,7 @@
 
 h1 {
   color: rgb(250, 250, 250);
+  
 }
 .spoimage{
   display: grid;
@@ -148,8 +149,9 @@ h1 {
   margin-top: 100PX;
 }
 .spbg{
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
 }
+
 
 .content{
   width: 80vw;
@@ -168,6 +170,7 @@ h1 {
 
 .heading {
   position: relative;
+ 
 }
 
 .heading::after {
@@ -360,17 +363,15 @@ position: relative;
 .crdcont{
 position: relative;
 background: #fff;
-width: 200px;
+width: 250px;
 box-shadow: 0 5px 25px rgba(252, 250, 250, 0.775);
 border-radius: 10px;
 overflow: hidden;
-justify-content: center;
-align-items: center;
 z-index: 1;
 }
 .crdcont .crdimg{
   position: relative ;
-  width: 200px;
+  width: 250px;
   height: 200px;
   display: flex;
   background-color: #060606;
@@ -384,7 +385,10 @@ z-index: 1;
 
 }
 
-
+.crd:hover{
+  box-shadow: 0 5px 25px rgba(181, 240, 161, 0.775);
+  border-radius: 10px;
+}
 .crdtxt p{
 margin: 5px;
 font-size: 1em;
@@ -403,7 +407,7 @@ transform-origin:right ;
 bottom: 8px;
 left: 8px;
 border-radius: 10px;
-filter: blur(5px);
+filter: blur(2.5px);
 opacity: 0.7;
 z-index: 0;
 }
@@ -420,7 +424,7 @@ transform-origin:left ;
 bottom: 8px;
 right: 8px;
 border-radius: 10px;
-filter: blur(5px);
+filter: blur(2.5px);
 opacity: 0.7;
 z-index: 0;
 }

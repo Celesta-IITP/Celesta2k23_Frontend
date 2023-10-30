@@ -69,7 +69,87 @@ class HomePage extends React.Component {
 					</div>
 				</div>
 
+<section className="eventsec">
 
+<h1>Events</h1>
+
+<section className="cursh">
+    <div className="crdconta">
+
+        <div className="crd">
+            <div className="crdcont">
+                <div className="crdimg">
+                 
+                  
+                   
+                </div>
+                {/* <div className="crdtxt">
+                    <p>JK TYRE</p>
+                </div> */}
+            </div>
+            <div className="curshd"></div>
+        </div>
+		<div className="crd">
+            <div className="crdcont">
+                <div className="crdimg">
+                 
+                  
+                   
+                </div>
+                {/* <div className="crdtxt">
+                    <p>JK TYRE</p>
+                </div> */}
+            </div>
+            <div className="curshd"></div>
+        </div>
+
+		<div className="crd">
+            <div className="crdcont">
+                <div className="crdimg">
+                 
+                  
+                   
+                </div>
+                {/* <div className="crdtxt">
+                    <p>JK TYRE</p>
+                </div> */}
+            </div>
+            <div className="curshd"></div>
+        </div>
+
+		<div className="crd">
+            <div className="crdcont">
+                <div className="crdimg">
+                 
+                  
+                   
+                </div>
+                {/* <div className="crdtxt">
+                    <p>JK TYRE</p>
+                </div> */}
+            </div>
+            <div className="curshd"></div>
+        </div>
+
+	
+        <div className="crd">
+            <div className="crdcont">
+                <div className="crdimg">
+                   
+                 
+                    
+                </div>
+              
+            </div>
+            <div className="curshd"></div>
+        </div>
+
+    </div>
+    
+    </section>
+
+
+</section>
 
 				<Footer marginTop={0} />
 			</div>
