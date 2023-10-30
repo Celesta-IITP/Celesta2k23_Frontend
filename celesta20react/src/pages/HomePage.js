@@ -41,8 +41,8 @@ class HomePage extends React.Component {
 					{/* <img alt="" className={styles.landing_background_odyssey} src={this.state.heroBgLayer} /> */}
 					<img alt="Hero" className={styles.landing_hero} src={heroImg} />
 					<img alt="Hero" className={styles.cloud1} src={cloud1} />
-					<img alt="Hero" className={styles.cloud2} src={cloud2} />
-					<img alt="Hero" className={styles.cloud3} src={cloud5} />
+					<img alt="Hero" className={styles.cloud2} src={cloud2} /> 
+					 <img alt="Hero" className={styles.cloud3} src={cloud5} />
 					<img alt="Hero" className={styles.cloud4} src={cloud4} />
 					<div className={styles.landing_title}>
 						<h1>Celesta ’23</h1>

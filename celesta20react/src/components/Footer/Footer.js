@@ -1,17 +1,29 @@
 import React from "react";
 import "./Footer.css";
+
 // import { Link } from "react-router-dom";
 export default function Footer({marginTop}) {
 	return (
 		<>
 			<div className="Footer" style={{marginTop : (marginTop != null ? marginTop : "")}}>
+			<div className="font-montserrat p-0 m-0 w-full">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-6 col-lg-5 col-12 ft-1">
-							<h3>
-								<span>CELESTA</span>
-							</h3>
-							<p>Celesta is the annual Techno-Management Fest of IIT Patna. </p>
+						<img
+                            src="https://github.com/melencholicmice/Reverberance2022/assets/99478938/d0aadcea-5018-4f9f-b585-007e0484c54a"
+                            alt="Celesta-Icon"
+                        />
+							<div className="col-md-6 col-lg-4 col-12 ft-3">
+							<h3>Contact:</h3>
+							<a href="mailto:celesta.iitp@gmail.com" >
+								celesta.iitp@gmail.com
+							</a>
+							{/* <p>
+								
+								Patna, Bihar
+							</p> */}
+						</div>
 							<div className="footerIcons">
 								<a href="https://youtube.com/@CelestaIITPatna" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
 									<i className="">
@@ -46,7 +58,7 @@ export default function Footer({marginTop}) {
 							</div>
 						</div>
 						<div className="col-md-6 col-lg-3 col-12 ft-2">
-							<h3>Quick Links</h3>
+							<h3>Direct Links</h3>
 							<ul>
 								<li className="nav-item">
 									<a href="/events-page">Events</a>
@@ -54,12 +66,18 @@ export default function Footer({marginTop}) {
 								<li className="nav-item">
 									<a href="/page1">Workshops</a>
 								</li>
-								<li className="nav-item">
+								{/* <li className="nav-item">
 									<a href="/ca">CA program</a>
-								</li>
+								</li> */}
 								<li className="nav-item">
 									<a href="/sponsors">Sponsors</a>
 								</li>
+								
+							</ul>
+						</div>
+						<div className="col-md-6 col-lg-4 col-12 ft-3">
+						<h3>Other Options</h3>
+							<ul>
 								<li className="nav-item">
 									<a href="/register-page">Register</a>
 								</li>
@@ -67,28 +85,13 @@ export default function Footer({marginTop}) {
 									<a href="/signin-page">Sign IN</a>
 								</li>
 							</ul>
-						</div>
-						<div className="col-md-6 col-lg-4 col-12 ft-3">
-							<h3>Contact Us</h3>
-							{/* <p><i className="fa-solid fa-envelope"></i> celesta.iitp@gmail.com</p> */}
-							<a href="mailto:celesta.iitp@gmail.com" >
-								celesta.iitp@gmail.com
-							</a>
-							<p>
-								{/* <i className="fa-solid fa-paper-plane">
-									<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-										<path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z" />
-									</svg>
-								</i>&nbsp; */}
-								Patna, Bihar
-							</p>
+							
 						</div>
 					</div>
 				</div>
 			</div>
-			{/* <div className='Last-footer'>
-                <p>CELESTA 2023</p>
-            </div> */}
+			</div>
+		
 		</>
 	);
 }
