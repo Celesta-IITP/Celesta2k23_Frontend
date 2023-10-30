@@ -111,5 +111,57 @@
   
 
 
-
+      .gallary23{
+        padding: 10px;
+        max-width: 1100px;
+        margin: 0 auto;
+     
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+        grid-auto-rows: 250px;
+        grid-auto-flow: dense;
+        }
+        .gallary23 div{
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.767);
+        }
+        .h_strech{
+            grid-column:span 2 ;
+        
+        }
+        
+        .v_strech{
+            grid-row: span 2;
+        }
+        
+        .big_strech{
+        grid-column: span 2;
+        grid-row: span 2;
+        }
+        
+        .gallary23 div img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @media(max-width:560px)
+        {
+            .gallary23{
+                grid-template-columns: 1fr;
+            }
+            .v_strech{
+                grid-column: span 1;
+                
+            }
+        
+            .h_strech{
+                grid-column: span 1;
+            }
+        
+            .big_strech{
+                
+                grid-column: span 1;
+            }
+        }
  
