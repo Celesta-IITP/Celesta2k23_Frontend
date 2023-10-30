@@ -22,7 +22,7 @@ class Modal extends React.Component {
 	// componentDidMount() {
 	// 	console.log(this.state.userInfo);
 	// }
-
+	
 	closeHandler = () => {
 		this.setState({
 			teamModal: false,
@@ -30,6 +30,7 @@ class Modal extends React.Component {
 	};
 
 	render() {
+		console.log(this.props.body)
 		return (
 			<React.StrictMode>
 				<div id="backdrop" className={styles.modal} onClick={() => this.props.closeHandler(false)}>
@@ -54,18 +55,20 @@ class Modal extends React.Component {
 								justifyContent: "center",
 							}}>
 							<div className={styles.image}>
-								<a href={this.props.body.postLinks[0]} target="_blank" rel="noopener noreferrer">
-									<img src={this.props.body.imageUrl ? this.props.body.imageUrl : defaultPoster} alt="Fest Poster" width="300px" style={{ borderRadius: "15px", aspectRatio: "1" }} />
-								</a>
+								{/* <a href={this.props.body.postLinks[0]} target="_blank" rel="noopener noreferrer">
+								</a> */}
+								<img src={this.props.body.imageUrl ? this.props.body.imageUrl : defaultPoster} alt="Fest Poster" width="300px" style={{ borderRadius: "15px", aspectRatio: "1" }} />
+
 							</div>
 							<div className={styles.modal_body}>
 								<div className={styles.date_venue}>
 									<span className={styles.date_text}>Date</span>
-									<span className={styles.date_value}>{this.props.body.date}</span>
+									<span className={styles.date_value}>{this.props.body.start_time.toLocaleDateString()}</span>
 									<br />
+									{/* <pre>{JSON.stringify(this.props,null,2)}</pre> */}
 									<span className={styles.date_text}>Timings</span>
 									<span className={styles.date_value}>
-										{this.props.body.startTime} - {this.props.body.endTime}
+										{this.props.body.start_time.toLocaleString()} - {this.props.body.end_time.toLocaleString()}
 									</span>
 									<br />
 									<span className={styles.date_text}>Venue</span>
@@ -73,42 +76,18 @@ class Modal extends React.Component {
 								</div>
 								<p className={styles.description}>{this.props.body.description}</p>
 								<div className={styles.team_pay}>
-									<div style={{ fontWeight: "500" }}>
-										{/* <img src="/assets/team.svg" /> */}
-										{this.props.body.teamSize === 1
-											? "Individual Participation"
-											: this.props.body.minTeamSize === this.props.body.teamSize
-											? this.props.body.minTeamSize + " members"
-											: this.props.body.minTeamSize + " - " + this.props.body.teamSize + " members"}
-									</div>
-									{this.props.body.charge ? (
-										// !userData.isAuth ? (
-										<div>
-											Registration Fee &nbsp;
-											{/* <img src="/assets/payment.svg" /> */}
-											<span style={{ fontWeight: "500" }}>₹{this.props.body.charge}</span>
-										</div>
-									) : // ) : userData.state.user.user_type !==
-									//   "iitp_student" ? (
-									//     <div>
-									//         Registration Fee &nbsp;
-									//         {/* <img src="/assets/payment.svg" /> */}
-									//         <span style={{ fontWeight: "500" }}>
-									//             ₹{this.props.body.registration_fee}
-									//         </span>
-									//     </div>
-									// ) : null
-									null}
+									
+									
 								</div>
 								<div className={styles.team_pay} style={{ flexDirection: "row" }}>
 									{/* <img src="/assets/alert.svg" /> */}
 									Registration closes before &nbsp;
-									<span style={{ fontWeight: "500" }}>{this.props.body.date}</span>
+									<span style={{ fontWeight: "500" }}>{this.props.body.registration_deadline.toLocaleString()}</span>
 								</div>
 								{this.props.body.prize !== undefined ? (
 									<div className={styles.team_pay} style={{ flexDirection: "row" }}>
 										Prizes worth: &nbsp;
-										<span style={{ fontWeight: "500" }}> ₹{this.props.body.prize}!</span>
+										<span style={{ fontWeight: "500" }}> ₹{this.props.body.prize}</span>
 									</div>
 								) : null}
 								<div className={styles.contacts}>
@@ -128,7 +107,7 @@ class Modal extends React.Component {
 														}
 														target="_blank"
 														rel="noopener noreferrer"
-														href={e[1] ? `tel:${e[1]}` : "#"}>
+														href={e[1] ? tel:${e[1]} : "#"}>
 														<span
 															style={{
 																fontWeight: "500",

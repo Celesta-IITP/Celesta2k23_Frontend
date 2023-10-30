@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.043aec62.chunk.css",
-    "main.js": "/static/js/main.0eb89d25.chunk.js",
-    "main.js.map": "/static/js/main.0eb89d25.chunk.js.map",
+    "main.css": "/static/css/main.bcb31d53.chunk.css",
+    "main.js": "/static/js/main.675e1f20.chunk.js",
+    "main.js.map": "/static/js/main.675e1f20.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a34fb36d.js",
     "runtime-main.js.map": "/static/js/runtime-main.a34fb36d.js.map",
     "static/css/2.6ec6d07c.chunk.css": "/static/css/2.6ec6d07c.chunk.css",
-    "static/js/2.530087e5.chunk.js": "/static/js/2.530087e5.chunk.js",
-    "static/js/2.530087e5.chunk.js.map": "/static/js/2.530087e5.chunk.js.map",
+    "static/js/2.3e13d9c7.chunk.js": "/static/js/2.3e13d9c7.chunk.js",
+    "static/js/2.3e13d9c7.chunk.js.map": "/static/js/2.3e13d9c7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2ae4edd0837e99e09e5d899eafa0083f.js": "/precache-manifest.2ae4edd0837e99e09e5d899eafa0083f.js",
+    "precache-manifest.8765d0aca10bb48c163d35a8a56e94cf.js": "/precache-manifest.8765d0aca10bb48c163d35a8a56e94cf.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.6ec6d07c.chunk.css.map": "/static/css/2.6ec6d07c.chunk.css.map",
-    "static/css/main.043aec62.chunk.css.map": "/static/css/main.043aec62.chunk.css.map",
-    "static/js/2.530087e5.chunk.js.LICENSE.txt": "/static/js/2.530087e5.chunk.js.LICENSE.txt",
+    "static/css/main.bcb31d53.chunk.css.map": "/static/css/main.bcb31d53.chunk.css.map",
+    "static/js/2.3e13d9c7.chunk.js.LICENSE.txt": "/static/js/2.3e13d9c7.chunk.js.LICENSE.txt",
     "static/media/4041.png": "/static/media/4041.e15aa5f7.png",
     "static/media/BeltronLogo.png": "/static/media/BeltronLogo.ce0c46de.png",
     "static/media/nucleo-icons.css": "/static/media/nucleo.f0b489a5.woff",
@@ -23,7 +23,6 @@
     "static/media/J K Logo ver.png": "/static/media/J K Logo ver.ccbfddf8.png",
     "static/media/LIC-Logo.png": "/static/media/LIC-Logo.d802c056.png",
     "static/media/LandingPageHero.webp": "/static/media/LandingPageHero.594abe76.webp",
-    "static/media/sponsors.css": "/static/media/LandingPageHeroBg.468f4c4b.webp",
     "static/media/LandingPageHeroBgLayer.webp": "/static/media/LandingPageHeroBgLayer.d85b6563.webp",
     "static/media/LandingPageHeroBgLayerAlt.webp": "/static/media/LandingPageHeroBgLayerAlt.d2bcb756.webp",
     "static/media/Logo - Verdant Odyssey.svg": "/static/media/Logo - Verdant Odyssey.62d3d7be.svg",
@@ -36,7 +35,7 @@
     "static/media/RegisterImage.webp": "/static/media/RegisterImage.d4ee2cdd.webp",
     "static/media/RegisterImageMobile.webp": "/static/media/RegisterImageMobile.758bea0c.webp",
     "static/media/RoboticsIndia.png": "/static/media/RoboticsIndia.a01a62df.png",
-    "static/media/StoriesOfBihar.png": "/static/media/StoriesOfBihar.4f342b9e.png",
+    "static/media/StoriesOfBihar.jpg": "/static/media/StoriesOfBihar.63ff6c60.jpg",
     "static/media/Techobyte.png": "/static/media/Techobyte.a5b1da7c.png",
     "static/media/ULTRATECH CEMENT 2023.jpg": "/static/media/ULTRATECH CEMENT 2023.315c5dc0.jpg",
     "static/media/arrow.svg": "/static/media/arrow.b99df939.svg",
@@ -69,8 +68,8 @@
   "entrypoints": [
     "static/js/runtime-main.a34fb36d.js",
     "static/css/2.6ec6d07c.chunk.css",
-    "static/js/2.530087e5.chunk.js",
-    "static/css/main.043aec62.chunk.css",
-    "static/js/main.0eb89d25.chunk.js"
+    "static/js/2.3e13d9c7.chunk.js",
+    "static/css/main.bcb31d53.chunk.css",
+    "static/js/main.675e1f20.chunk.js"
   ]
 }

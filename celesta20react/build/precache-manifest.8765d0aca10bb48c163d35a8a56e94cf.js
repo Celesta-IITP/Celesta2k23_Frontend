@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b6544342e1d6f913014fb86f2b5e1d1",
+    "revision": "5f8072634976d17b254115cba04c874c",
     "url": "/index.html"
   },
   {
-    "revision": "f7c8487d2ac2fe7f30c3",
+    "revision": "f215e0ea623c1ef4ea9a",
     "url": "/static/css/2.6ec6d07c.chunk.css"
   },
   {
-    "revision": "abc19fda6769cbbb11a1",
-    "url": "/static/css/main.043aec62.chunk.css"
+    "revision": "57fbd3a739bb1063ce3a",
+    "url": "/static/css/main.bcb31d53.chunk.css"
   },
   {
-    "revision": "f7c8487d2ac2fe7f30c3",
-    "url": "/static/js/2.530087e5.chunk.js"
+    "revision": "f215e0ea623c1ef4ea9a",
+    "url": "/static/js/2.3e13d9c7.chunk.js"
   },
   {
     "revision": "9c4a88d9b57cf919f2c23e04e5eabae2",
-    "url": "/static/js/2.530087e5.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.3e13d9c7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "abc19fda6769cbbb11a1",
-    "url": "/static/js/main.0eb89d25.chunk.js"
+    "revision": "57fbd3a739bb1063ce3a",
+    "url": "/static/js/main.675e1f20.chunk.js"
   },
   {
     "revision": "07206fb327ab88254dec",
@@ -62,10 +62,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "594abe7689f4db6890dbe376bbb52156",
     "url": "/static/media/LandingPageHero.594abe76.webp"
-  },
-  {
-    "revision": "468f4c4b63f9bb12f02be41341177e33",
-    "url": "/static/media/LandingPageHeroBg.468f4c4b.webp"
   },
   {
     "revision": "d85b65639429711f712ea103e7fb3ced",
@@ -132,8 +128,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/RoboticsIndia.a01a62df.png"
   },
   {
-    "revision": "4f342b9ee121487d8bb35b355e9dccb6",
-    "url": "/static/media/StoriesOfBihar.4f342b9e.png"
+    "revision": "63ff6c60347319b03a985f4b300d3082",
+    "url": "/static/media/StoriesOfBihar.63ff6c60.jpg"
   },
   {
     "revision": "a5b1da7c09b5eb8514fcfa584abb4231",
