@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5b968f0914fe1922c5c50424920c7b66",
+    "revision": "ad602307b26f6cf18c7f3762ad069d57",
     "url": "/index.html"
   },
   {
-    "revision": "aebd44db1faf220fd838",
+    "revision": "e9e4fcb9a8796b6d5616",
     "url": "/static/css/2.6ec6d07c.chunk.css"
   },
   {
-    "revision": "bdb3bda5fd4c1dbe8874",
-    "url": "/static/css/main.0c2667ed.chunk.css"
+    "revision": "d17ad9bb55e041596be8",
+    "url": "/static/css/main.84cc1274.chunk.css"
   },
   {
-    "revision": "aebd44db1faf220fd838",
-    "url": "/static/js/2.63cd6196.chunk.js"
+    "revision": "e9e4fcb9a8796b6d5616",
+    "url": "/static/js/2.b31cb38e.chunk.js"
   },
   {
     "revision": "9c4a88d9b57cf919f2c23e04e5eabae2",
-    "url": "/static/js/2.63cd6196.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.b31cb38e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bdb3bda5fd4c1dbe8874",
-    "url": "/static/js/main.7ec9c349.chunk.js"
+    "revision": "d17ad9bb55e041596be8",
+    "url": "/static/js/main.c7459040.chunk.js"
   },
   {
     "revision": "07206fb327ab88254dec",
@@ -36,12 +36,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/4041.e15aa5f7.png"
   },
   {
+    "revision": "ce0c46de3947cf1ebef54e25e9475584",
+    "url": "/static/media/BeltronLogo.ce0c46de.png"
+  },
+  {
     "revision": "603a56d0d52fe6bbfd13b08a1195b7e8",
     "url": "/static/media/Chopsic-K6Dp.603a56d0.ttf"
   },
   {
     "revision": "eac8fde3c66b4d32e6accfcd2ff6bec1",
     "url": "/static/media/GardaPatna.eac8fde3.png"
+  },
+  {
+    "revision": "a132ef1c608335fcd90da7d491a5447c",
+    "url": "/static/media/HotelAmalfiGrandPatna.a132ef1c.png"
+  },
+  {
+    "revision": "4e2f55e9a1f36bbf8ac5220823079d5d",
+    "url": "/static/media/ItHappensinBihar.4e2f55e9.png"
+  },
+  {
+    "revision": "ccbfddf8a2e83588c7358daed77cfa05",
+    "url": "/static/media/J K Logo ver.ccbfddf8.png"
   },
   {
     "revision": "d802c0566ae2f90b4c6c3fc3dacbe72b",
@@ -68,6 +84,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Logo - Verdant Odyssey.a45f941f.svg"
   },
   {
+    "revision": "c2d5ade8709efed59fea47567e4464c4",
+    "url": "/static/media/LogoM-0.c2d5ade8.png"
+  },
+  {
     "revision": "cce7ff8c1d7999f907b6760fbe75d99d",
     "url": "/static/media/Montserrat-Black.cce7ff8c.ttf"
   },
@@ -88,12 +108,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Montserrat-Regular.5e077c15.ttf"
   },
   {
+    "revision": "e3390ea43698524840880a454abb127a",
+    "url": "/static/media/PatnaBeats.e3390ea4.png"
+  },
+  {
+    "revision": "e1d1a877e93d4a3e8951137ade5aa877",
+    "url": "/static/media/Patnaites.e1d1a877.png"
+  },
+  {
+    "revision": "94f3a47c7f0ef55c757ea9434809a884",
+    "url": "/static/media/PulNirman.94f3a47c.png"
+  },
+  {
+    "revision": "5b8dd80f48ab5fbd4a32dfbfbab777ec",
+    "url": "/static/media/Radiomirchi_logo.5b8dd80f.png"
+  },
+  {
     "revision": "d4ee2cddc075d72e11c7509d73a96c80",
     "url": "/static/media/RegisterImage.d4ee2cdd.webp"
   },
   {
     "revision": "758bea0cfdc9c6a10558d10c944f1477",
     "url": "/static/media/RegisterImageMobile.758bea0c.webp"
+  },
+  {
+    "revision": "a01a62dfbc449e07ba584e1cd2061ee4",
+    "url": "/static/media/RoboticsIndia.a01a62df.png"
+  },
+  {
+    "revision": "4f342b9ee121487d8bb35b355e9dccb6",
+    "url": "/static/media/StoriesOfBihar.4f342b9e.png"
+  },
+  {
+    "revision": "a5b1da7c09b5eb8514fcfa584abb4231",
+    "url": "/static/media/Techobyte.a5b1da7c.png"
   },
   {
     "revision": "315c5dc0143babb6e832d7d0f3556724",
@@ -106,6 +154,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "01085abe4f9938f0b486599ea1c2e35e",
     "url": "/static/media/baseguns.01085abe.jpg"
+  },
+  {
+    "revision": "4f50a7f073adc3fccfe3557297a28640",
+    "url": "/static/media/beardo_logo_black.4f50a7f0.png"
   },
   {
     "revision": "d70c756f2a739722a398819cfa7287a7",

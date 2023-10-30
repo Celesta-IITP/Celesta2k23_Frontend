@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter,Route, Switch } from "react-router-dom";
 
 import "assets/css/nucleo-icons.css";
 import "assets/scss/blk-design-system-react.scss?v=1.1.0";
@@ -27,7 +27,7 @@ import ManagerialEvents from "./components/Explore/Managerial/man_explore";
 import RoboticsEvents from "./components/Explore/Robotics/robo_explore";
 import SuspEvents from "./components/Explore/SUSP/susp_explore";
 import TechnicalEvents from "./components/Explore/Technical/tech_explore";
-import CA from "./components/CA/ca.js";
+// import CA from "./components/CA/ca.js";
 import AddEvent from "./components/AddEvent/addEvent";
 import Points from "components/PtsTable/pts.js";
 
@@ -39,7 +39,7 @@ import RegisterPageN from "views/examples/RegisterPagen";
 class App extends React.Component {
 	render() {
 		return (
-			<BrowserRouter>
+			<HashRouter>
 				<Switch>
 					<Route
 						path="/"
@@ -143,7 +143,7 @@ class App extends React.Component {
 						path="/stats"
 						render={(props) => <Stats {...props} />}
 					/>
-					<Route path="/ca" render={(props) => <CA {...props} />} />
+					{/* <Route path="/ca" render={(props) => <CA {...props} />} /> */}
 					<Route path="*" component={NotFound} />
 					{/* <Redirect from="/" to="/components" /> */}
 
@@ -153,7 +153,7 @@ class App extends React.Component {
             // render={(props) => <RegisterPageN {...props} />}
           /> */}
 				</Switch>
-			</BrowserRouter>
+			</HashRouter>
 		);
 	}
 }
