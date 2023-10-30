@@ -328,6 +328,7 @@ body {
     display: block;
     width: 300px;
     height: 300px;
+    object-fit: cover;
 }
 
 .speaker-block .social-links{
