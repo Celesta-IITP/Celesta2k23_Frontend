@@ -54,6 +54,14 @@ const teamdata = [
         position: "",
         fb: "www.fb.com",
         ln: "www.linkedin.com"
+      },
+      {
+        name: "Honey Khatri",
+        image:
+          "https://drive.google.com/uc?export=view&id=140DAjWZUDpFlHwNfz_FxJvex-RrvaP_N",
+        position: "",
+        fb: "www.fb.com",
+        ln: "www.linkedin.com"
       }
     ]
   },

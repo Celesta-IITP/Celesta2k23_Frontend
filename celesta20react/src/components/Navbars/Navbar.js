@@ -193,7 +193,7 @@ class ComponentsNavbar extends React.Component {
 
 								{this.state.secondaryOpen && (
 									<div className="nav-mobile-secondary">
-										<Link to="/ca">CAMPUS AMBASADDOR</Link>
+										{/* <Link to="/ca">CAMPUS AMBASADDOR</Link> */}
 										{/* <Link to="/Points">LIVE POINTS TABLE</Link> */}
 										<Link to="/gallery">GALLERY</Link>
 										<Link to="/sponsors">SPONSORS</Link>

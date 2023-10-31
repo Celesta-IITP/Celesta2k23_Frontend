@@ -107,7 +107,7 @@ class Modal extends React.Component {
 														}
 														target="_blank"
 														rel="noopener noreferrer"
-														href={e[1] ? tel:${e[1]} : "#"}>
+														href={e[1] ? 'tel:${e[1]}' : "#"}>
 														<span
 															style={{
 																fontWeight: "500",
