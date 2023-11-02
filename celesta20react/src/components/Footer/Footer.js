@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 // import { Link } from "react-router-dom";
@@ -61,16 +62,19 @@ export default function Footer({marginTop}) {
 							<h3>Direct Links</h3>
 							<ul>
 								<li className="nav-item">
-									<a href="/events-page">Events</a>
+									{/* <a href="/events-page">Events</a> */}
+									<Link to="/events-page">EVENTS</Link>
 								</li>
 								<li className="nav-item">
-									<a href="/page1">Workshops</a>
+									{/* <a href="/page1">Workshops</a> */}
+									<Link to="/Team">OUR TEAM</Link>
 								</li>
 								{/* <li className="nav-item">
 									<a href="/ca">CA program</a>
 								</li> */}
 								<li className="nav-item">
-									<a href="/sponsors">Sponsors</a>
+									{/* <a href="/sponsors">Sponsors</a> */}
+									<Link to="/sponsors">SPONSORS</Link>
 								</li>
 								
 							</ul>
@@ -79,10 +83,14 @@ export default function Footer({marginTop}) {
 						<h3>Other Options</h3>
 							<ul>
 								<li className="nav-item">
-									<a href="/register-page">Register</a>
+									{/* <a href="/register-page">Register</a> */}
+									<Link to="/register-page" >
+											REGISTER
+										</Link>
 								</li>
 								<li className="nav-item">
-									<a href="/signin-page">Sign IN</a>
+									{/* <a href="/signin-page">Sign IN</a> */}
+									<Link to="/signin-page">LOG IN</Link>
 								</li>
 							</ul>
 							
